@@ -88,7 +88,7 @@
                   </progress>
                 </div>
               </label>
-              <button id="next-page-btn" class="btn btn-primary">Go to Next Page</button>
+              <button id="next-page-btn" class="btn btn-primary" style="display: none;">Go to Next Page</button>
             </form>
           </div>
         </div>
@@ -316,12 +316,14 @@
     // File upload handling functions
     function handleImageUpload(input) {
       var file = input.files[0];
+      var nextPageButton = document.getElementById("next-page-btn");
       if (file) {
         var reader = new FileReader();
 
         reader.onload = function (e) {
           var imageSrc = e.target.result;
           localStorage.setItem("uploadedImage", imageSrc);
+          nextPageButton.style.display = "inline-block";
         };
 
         reader.readAsDataURL(file);
