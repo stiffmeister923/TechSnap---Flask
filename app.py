@@ -1,8 +1,16 @@
-from flask import Flask, request, jsonify, render_template
-
+from flask import Flask, request, session, jsonify, render_template, redirect, url_for, current_app
+from flask_sqlalchemy import SQLAlchemy
 import requests
 
 app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'  # SQLite database file
+db = SQLAlchemy(app)
+class ContactMessage(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    full_name = db.Column(db.String(100), nullable=False)
+    email = db.Column(db.String(120), nullable=False)
+    subject = db.Column(db.String(200))
+    message = db.Column(db.Text, nullable=False)
 
 @app.route('/')
 def index():
@@ -46,10 +54,29 @@ def detect_objects():
     except Exception as e:
         return jsonify({'error': str(e)})
     
+@app.route('/submit_contact', methods=['POST'])
+def submit_contact():
+    try:
+        # Get form data from the request
+        full_name = request.form.get('full-name')
+        email = request.form.get('email')
+        subject = request.form.get('subject')
+        message = request.form.get('message')
 
+        # Save form data to the database
+        new_message = ContactMessage(full_name=full_name, email=email, subject=subject, message=message)
+        db.session.add(new_message)
+        db.session.commit()
+
+        return redirect(url_for('index'))
+
+    except Exception as e:
+        return jsonify({'error': str(e)})
 
     
     
 
 if __name__ == '__main__':
+    with app.app_context():
+        db.create_all()
     app.run(debug=True)
