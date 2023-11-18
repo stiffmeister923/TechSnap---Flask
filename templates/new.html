@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,6 +15,35 @@
     <!-- Font Google -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            height: 550px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+        .Submitbruh{
+            display:inline-block;
+        }
+    </style>
 </head>
 <body>
 <!-- Navbar -->
@@ -34,20 +64,44 @@
                 <div class="col-md-8 col-sm-12">
                     <div class="banner-text">
                         <h2 class="white">Results</h2>
-                        {% if result %}
-                        <h6 class="white">The Predicted Computer part is {{result['data'][0]['name']}} with a confidence of {{result['data'][0]['confidence']}}</h6>
+                        {% if result1 %}
+                        <h6 class="white">The Predicted Computer part is {{result1['data'][0]['name']}} with a confidence of  {{ "{:.2f}".format(result1['data'][0]['confidence']*100) }}%</h6>
                         {% endif %}
-                        <p class="banner-text white"></p>
+                        <button onclick="openModal()" class="about-btn">Open Category Selection</button>
+                        <div id="modal" class="modal">
+                            <form action="/process_form" method="post" onsubmit="return validateForm()">
+                                <label>Choose a category:</label><br>
+                                <input type="radio" id="gaming" name="category" value="gaming" required>
+                                <label for="gaming">Gaming</label><br>
+                                <input type="radio" id="professional" name="category" value="professional" required>
+                                <label for="professional">Professional</label><br><br>
+                    
+                                <label>Choose a subcategory:</label><br>
+                                <input type="radio" id="laptop" name="subcategory" value="laptop" required>
+                                <label for="laptop">Laptop</label><br>
+                                <input type="radio" id="pc" name="subcategory" value="pc" required>
+                                <label for="pc">PC</label><br><br>
+                    
+                                <label for="budget">Enter your budget:</label><br>
+                                <input type="text" id="budget" name="budget" required><br><br>
+                    
+                                <button type="submit" class="Submitbruh">Submit</button>
+                            </form>
+                            <button onclick="closeModal()">Close</button>
+                        </div>
+                    
+                        <div id="overlay" class="overlay" onclick="closeModal()"></div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-12">
-                    <img id="uploaded-image" src="{{ result.image_url }}" alt="Uploaded Image">
+                    <img id="uploaded-image" src="{{ result1.image_url }}" alt="Uploaded Image">
                 </div>
             </div>
         </div>
     </div>
 </section>
 <!-- Result End -->
+
 
 <!-- Other Start -->
 <section class="about section-padding prelative" data-scroll-index="1">
@@ -128,6 +182,41 @@
             imageElement.style.border = "4px solid #fff";
         }
     }
+    function openModal() {
+            document.getElementById('modal').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+
+        function validateForm() {
+            var categoryRadios = document.getElementsByName('category');
+            var categorySelected = false;
+
+            for (var i = 0; i < categoryRadios.length; i++) {
+                if (categoryRadios[i].checked) {
+                    categorySelected = true;
+                    break;
+                }
+            }
+
+            if (!categorySelected) {
+                alert('Please choose a category!');
+                return false;
+            }
+
+            var budget = document.getElementById('budget').value;
+            if (isNaN(budget) || budget <= 0) {
+                alert('Please enter a valid budget!');
+                return false;
+            }
+
+            closeModal();  // Close the modal after successful validation
+            return true;
+        }
 </script>
 </body>
 </html>
