@@ -1,8 +1,10 @@
-from flask import Flask, request, session, jsonify, render_template, redirect, url_for, current_app
+from flask import Flask, request, session, jsonify, render_template, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
+from prebuiltsystem import run_function
 import requests
 
 app = Flask(__name__)
+app.secret_key = 'Matt'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'  # SQLite database file
 db = SQLAlchemy(app)
 class ContactMessage(db.Model):
@@ -21,12 +23,31 @@ def your_route():
     try:
         # Simulate data retrieval or processing
         result = {"prediction": "Your prediction", "image_url": "your_image_url.jpg"}
-
-        # Render the 'new.html' template with the simulated data
+        session['resultImg'] = result
+        # Render the 'new.html' template with the simulated data    
         return render_template('new.html', result=result)
 
     except Exception as e:
         return jsonify({'error': str(e)})
+    
+
+@app.route('/process_form', methods=['POST'])
+def process_form():
+    if request.method == 'POST':
+        # Get user selections from the form
+        category = request.form['category']
+        subcategory = request.form['subcategory']
+        budget = int(request.form['budget'])
+        results =run_function(category, subcategory, budget)
+        unicodess = u"\u279C"
+        # Process the selections (you can replace this with your actual processing logic)
+        result = session.get('resultImg', {})
+        category = f'{category} {unicodess} {subcategory}'
+        inference = session.get('inference',{})
+        #template results[selected,best][per computer][attributes]
+        # Pass the result to the template
+        return render_template('recommend.html', recommend1=results[0], recommend2 =results[1] , category=category.upper(), result=result, result1=inference)
+    
 
 @app.route('/detect', methods=['POST'])
 def detect_objects():
@@ -47,9 +68,9 @@ def detect_objects():
 
         # Check for a successful response
         response.raise_for_status()
-
+        session['inference'] = response.json()
         # Render the 'new.html' template with the API response
-        return render_template('new.html', result=response.json())
+        return render_template('new.html', result1=response.json())
 
     except Exception as e:
         return jsonify({'error': str(e)})
@@ -73,8 +94,6 @@ def submit_contact():
     except Exception as e:
         return jsonify({'error': str(e)})
 
-    
-    
 
 if __name__ == '__main__':
     with app.app_context():
