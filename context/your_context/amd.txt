@@ -1,0 +1,19 @@
+AMD
+AN AMD Ryzen CPU. The gold triangle in the bottom left assists with alignment during insertion. As seen here, most AMD CPUs use pins that insert into a socket on the motherboard, which is the opposite of Intel platforms, which feature pins on the motherboard.
+Recent AMD Ryzen CPUs use a naming scheme that is different than, but similar to Intel's. AMD and Intel now both use the 3/5/7/9 series CPU classification, with AMD not using an "i" prefix. Ryzen processors increase in price as the last three numbers increase.
+Zen 4
+Ryzen 9 7950X3D 4.2/5.7 GHz 16c/32t
+Ryzen 9 7950X 4.5/5.7 GHz 16c/32t
+Ryzen 9 7900X3D 4.4/5.6 GHz 12c/24t
+Ryzen 9 7900X 4.7/5.6 GHz 12c/24t
+Ryzen 9 7900 3.7/5.4 GHz 12c/24t
+Ryzen 7 7800X3D max 5.0 GHz 8c/16t
+Ryzen 7 7700X 4.5/5.4 GHz 8c/16t
+Ryzen 7 7700 3.8/5.3 GHz 8c/16t
+Ryzen 5 7600X 4.7/5.3 GHz 6c/12t
+Ryzen 5 7600 3.8/5.1 GHz 6c/12t
+
+The TDP of a processor gives an idea of how much power would it consume in a standard heavy use scenario.
+But note that it does not give the absolute maximum power it would consume. For instance , if you try to stress your CPU by running Prime95(a popular CPU stressing tool) or something of that sort , it is likely to exceed the TDP rating(atleast for a short period of time , this depends on the cooling efficiency.)
+In some cases , it can nearly be the double. For instance , a MacBook Air with 15W TDP can hit up to 29W when running graphics-heavy workloads.
+The TDP in a laptop is lower than a desktop , because laptops have space and battery requirements.

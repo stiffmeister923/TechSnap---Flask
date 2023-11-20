@@ -1,0 +1,6 @@
+A Serial ATA connector A M.2 slot on a motherboard with mounting posts highlighted
+Next install the storage drive and optical drives.
+How a drive is physically installed will depend on the case.
+Most drives are SATA (Serial ATA) which use simple, small cables for a data connection. The ends of the cables are L shaped, just look carefully at the cable ends and the connector on the drive and match them up. Only one drive can be connected to each SATA port on the motherboard.
+Next install the SATA power cable. Some SATA drives also have a molex power connector - make sure you connect only one of these ports to the power supply, connecting both can damage the drive.
+Newer SSD's will often use the PCI Express standard; for those, follow the same instructions as you would do for a PCI Express graphics card.

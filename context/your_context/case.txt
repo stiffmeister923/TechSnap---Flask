@@ -1,0 +1,38 @@
+The case is one of the most practical straightforward parts of a computer. A case can also be aesthetically pleasing, and help improve your computing experience.
+Form factor
+Form factor is the specification that provides the physical measurements for the size of components supported. Your case should support one or more of the following common formfactors. It's a good idea to match the formfactor of a case with a motherboard.
+Large Form Factors
+EATX or Extended ATX boards are 12 by 13 inches (30 × 33 cm). This format is almost exclusive to workstation and high end gaming computers. ATX is the most common form factor and is the de facto standard. Supports about 7 expansion slots.
+These formfactors offer the most amount of flexibility in expansion. These spacious cases are often easy to work in, but hard to move around.
+Small Form Factors
+microATX, or µATX, is smaller than standard ATX. Many cases that support ATX also allow micro-ATX. Supports about 4 expansion slots.
+Mini-ITX is even smaller at 6.75 inches (17.1 cm) square. Supports at most one expansion slot.
+These form-factors let you build relatively small and even portable computers, ideal for taking to LAN parties or for people who frequently move.
+Slim cases are offered in these form factors. These cases are significantly thinner then regular cases. However, you will be limited to using slim expansion cards as well. You may also need to use laptop components in some areas to save space depending on the case.
+Particularly small cases can be hard to work in and offer limited expansion. They may have airflow problems, and cable management can be a challenge. You may need to find low profile cooling units, and the case may not support regular sized power supplies. You may also want to get angled cables or adapters if spacing between parts is tight, and you suspect it would make your work easier.
+Drive Bays
+Internal storage drives take up space in the case, so make sure you consider how many drives you will need and what size slot they require. Not all cases support every drive size.
+There are several bay sizes, and each has a typical use.
+5.25" bays typically hold optical drives, fan controllers, or other accessories, and are external facing.
+3.5" external bays are typically used for smaller versions of accessories found in 5.25" bays (But not optical drives).
+3.5" internal bays are used for holding desktop hard disks or an SSD.
+2.5" bays are typically used for holding an SSD or laptop size hard disk.
+Note that it's possible to buy adapters to fit items that go in small bays (usually hard drives) into large bays.
+Many cases offer modular drive bays, which can be removed if they are not needed to make space for other components. This can be useful if a drive bay is getting in the way of another component, such as a long graphics card.
+Some cases designed for minimalist aesthetics or gaming will not use external drive bays to make room for better airflow. If you use a case like this and need an optical drive, you will have to get an external drive.
+If you are planning on using an M.2 SSD, your motherboard will provide a slot for your storage device. Some cases will have dedicated mounting points for 2.5" storage drives, which can free up space in other areas of the case.
+Front IO
+Almost all cases will feature a power on button on the front of the case. Other common IO featured on the front of cases includes audio jacks, USB ports, a reset button, status lights, and other features.
+It's important to consider where the front IO is on the case you buy, and how it factors into your workspace. For example, if your case will just barely fit under your desk, IO located on the very top of your case could be hard to use.
+In rare instances when you are not purchasing a new case you need new to get front IO separately from your case, (For example, when using an very old, nonstandard, or DIY case) there are simple kits available that give you a power button and a few IO ports. Alternatively you can manually use a jumper each time you want to turn the computer on, though this is somewhat tedious.
+Computer Aesthetics
+Cases are typically made of steel or more rarely aluminum, and usually have accents made out of plastic. More exotic case materials are sometimes used such as wood.
+Some cases hide their 5.25" bays with a door for a cleaner look. This has a practical benefit of helping reduce drive noise.
+A quality case will include features that make it easier to manage cables. Besides looking better, by keeping cables out of the way and orderly, maintenance and troubleshooting is made easier.
+Cases typically mount the power supply in either the top of the case, or the bottom. Some higher end cases will have a separate chamber for the power supply, assisting cable management and giving it a degree separation from the hot components in the rest of the case.
+Many cases will have windows installed. These provide a view into the system, and can highlight nice looking components. When moving a computer with a windowed case, keep in mind that an acrylic window will easily scratch, and a glass window may shatter. A solid sheet of metal is best when it comes to blocking noise and durability.
+Many gamers use components with RGB lighting to give their computer flair. Keep in mind that there aren't really unified standards for RGB lighting, so if you want to mix and match between different manufacturers and coordinate the resulting lightshow you'll need to use multiple software products at the same time. RGB LED light strips, or their older counterpart cold cathode lights can be used to provide lighting if your components lack integrated lights.
+Some cases feature integral noise reducing foam, offering a clean look while providing the benefits of noise reduction.
+Many people like to mod their cases. There are many easy mods that can be done before your computer is built (And all electronics are removed from the case), such as painting the case a different color, or giving it a funky coat of paint through Hydro dipping
+A case stand can be a good tool to use if you plan on placing your computer on the ground, as it creates additional clearance from things such as dirt, dust, and carpets.
+You may want to use a dust cover for unused ports. This helps you avoid trying to plug in devices into the wrong ports when reaching behind a case, and helps make cleaning easier. Dust covers also exist for external peripherals such as monitors if you plan on storing them away for a while.

@@ -1,0 +1,1 @@
+Noisy power-supplies simply have to be replaced with quieter ones. Consider selecting a power supply that intelligently throttles fan speed based on load, or an altogether fanless model, though those can be hard to find depending on the wattage you need. As a compromise, some power supplies will stay silent as long as it is under light load.

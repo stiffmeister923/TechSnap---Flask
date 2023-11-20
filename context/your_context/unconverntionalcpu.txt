@@ -1,0 +1,5 @@
+Unconventional CPU choices
+For whatever reason, you may want to use an non Intel or AMD CPU for your system. These choices are unconventional on desktop computers for good reasons. Their linage typically stems from other use cases, such as embedded or mobile systems, and are often woefully under powered or based on cheaper obsolete manufacturing methods. They are typically available as a SOC only, and your choice in what GPU, RAM, or other hardware you end up using may be limited or non existent. Furthermore software support is limited, and you are typically left running some flavor of Linux or BSD, and even then the lack of support for that hardware may affect you.
+Through a quirk of history, VIA makes some low powered x86 processors.
+There are a few ATX form factor motherboards with standard expansion slots and integrated ARM or PowerPC processors intended for special use servers and workstations.
+There are also a number of smaller boards of nonstandard sizes that use ARM or RISC-V processors. Intended for hobbyists and developers, these boards are cheap, but offer limited power and component flexibility.

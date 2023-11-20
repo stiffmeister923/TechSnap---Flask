@@ -2,9 +2,12 @@ from findbest import  find_best_computer2
 import json
 f = open('json/GamingPCDataset.json')
 d = open('json/ProfessionalPCDataset.json')
+l = open('json/GamingLaptopDataset.json')
+s = open('json/ProfessionalLaptopDataset.json')
 dataset = json.load(f)
 profdataset =json.load(d)
-
+laptop =json.load(l)
+proflapset =json.load(s)
 def knapsack(computers, budget):
     n = len(computers)
     
@@ -41,7 +44,7 @@ def run_function(category,subcategory,budget):
             #return [selected_computers,best_computer]
             return [selected_computers, best_computer]
         else:
-            selected_computers = knapsack(laptopgamingdataset, budget) 
+            selected_computers = knapsack(laptop[0], budget) 
     else:
         if(subcategory == 'PC'.lower()):
             selected_computers = knapsack(profdataset[0], budget)
@@ -49,7 +52,7 @@ def run_function(category,subcategory,budget):
             #return [selected_computers,best_computer]
             return [selected_computers, best_computer]
         else:
-            selected_computers = knapsack(laptopprofessionaldataset, budget)   
+            selected_computers = knapsack(proflapset[0], budget)   
 
 def return_string(selected, best):
     stringtable = []

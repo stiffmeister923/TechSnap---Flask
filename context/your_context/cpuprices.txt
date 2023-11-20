@@ -1,0 +1,35 @@
+Level	Prices
+Ultra budget: $30-49
+CPUs in this range are typically very basic and are suitable for basic computing tasks. These might include budget-friendly options from entry-level product lines.
+Extra budget: $50-69
+This category offers slightly more performance than ultra-budget options. You can expect CPUs in this range to handle basic computing tasks more efficiently.
+Entry-level: $70-99
+CPUs in this range are suitable for general tasks such as web browsing, office applications, and light multitasking. They offer a balance between performance and affordability.
+Upper entry-level: $100-149
+CPUs in this category provide more power and can handle heavier workloads compared to entry-level options. They are suitable for tasks that require a bit more processing power.
+Lower mid-range: $150-199
+CPUs in this range offer good performance for a variety of tasks, including moderate multitasking, content creation, and some gaming. They strike a balance between affordability and performance.
+Mid-range: $200-249
+
+Examples in this range might include mid-tier processors from Intel's i5 series or AMD's Ryzen 5 series.
+Upper mid-range: $250-299
+
+Processors in this category could be higher-end models within the mid-range segment, such as Intel's i5-11600K or AMD's Ryzen 5 5600X.
+Lower high-end: $300-349
+
+CPUs in this range could include mid-to-high-end processors like Intel's i7 series or AMD's Ryzen 7 series.
+High-end: $350-399
+
+This category might include CPUs like Intel's i7-11700K or AMD's Ryzen 7 5800X.
+Upper high-end: $400-499
+
+Processors in this range could be high-end models, possibly Intel's i9 series or AMD's Ryzen 9 series.
+Flagship: $500-599
+
+CPUs in this range may be considered flagship models with high performance, like Intel's i9-11900K or AMD's Ryzen 9 5900X.
+True flagship: $600-799
+
+This category might include top-tier CPUs with exceptional performance, such as Intel's i9-12900K or AMD's Ryzen 9 5950X.
+Ultimate flagship: $800+
+
+The most powerful and advanced CPUs available, possibly including high-end workstation or server processors.

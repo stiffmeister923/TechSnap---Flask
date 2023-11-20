@@ -1,0 +1,10 @@
+Overclocking
+Desktop chips
+Most desktop chips are locked to prevent overclocking.
+Intel chips marked with a K have unlocked multipliers, allowing for easier overclocking. K series processors are usually priced slightly higher than locked CPU models.
+AMD chips are typically unlocked, even on lower end chips.
+The ability for a processor to overclock well is highly dependent on the individual CPU. This is due to minute differences caused during manufacturing, which are not noticeable at stock speeds, but can become problematic at higher speeds or when consuming more power. This so called "Silicon Lottery" could mean your chip under preforms or over preforms the typical overclocking potential of your specific processor.
+There are external factors that affect the ability of a CPU to achieve a stable overclock, such as the power provided by a motherboard, or the cooling offered by the heatsink.
+Mobile chips
+If you have chosen to use a mobile processor in a desktop system, it is likely for their low power requirements and heat benefits. Overclocking basically nullifies these benefits, and is rarely supported on mobile chips anyway. However, there are some exceptions.
+Intel mobile cpus marked with HK can be overclocked.

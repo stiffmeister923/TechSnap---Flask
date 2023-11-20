@@ -1,0 +1,38 @@
+GPU Basics
+A GPU or Graphics Processing Unit is what allows your computer to display images on a monitor. The majority of home and office computers use an 'onboard' or integrated graphic processor which is included on many processors, but workstations and gaming computers require the power of one or more dedicated graphics cards. Despite the name, modern GPU excel at processing large amounts of many different kinds of information, and are often used in physics simulations, audio processing, and even to run Artificial Intelligence models.
+Currently, three companies dominate the 3D graphics accelerator market; nVIDIA, AMD and Intel, who build their own chips and license their technologies to other companies to integrate into video cards. These companies make a complete line of GPUs with entries at every price/performance level.
+Do you need a Graphics Card?
+If your tasks are non intensive such as web browsing or office work, or likely to be more dependent on the CPU then the GPU, you may be able to get away with an entry-level GPU, or even an integrated GPU. An integrated GPU uses the system's RAM, and relies heavily on your system's CPU. This will mean slow performance for graphic-intensive software, such as games. As long as your motherboard has slots for it, and your PSU has power for it, you can always add a GPU later should you find the integrated graphics inadequate.
+If you have a CPU that does not have a graphics processor, as is common on some high end processor lines, then you will need to buy a discrete video card to use a monitor.
+Graphics Card Specifications
+Like a CPU, a GPU will have it's own clock speed and core count, though since GPU cores are simpler, many more can be fit onto a chip with high end GPUs having thousands of processors. Video cards have their own RAM which cannot be upgraded later, and many of the same rules that govern the motherboard RAM field apply here: to a point, the more RAM, and the faster it is, the better the performance will be. Most cards offer at least 8GB of VRAM, though many cards offer more. As a rule of thumb, if you want a high end video card, you need a minimum of 12GB of video memory or preferably 16GB.
+It is generally better to choose your video card based on your own research, as everyone has slightly different needs. Many video card and chip makers are known to measure their products' performances in ways that you may not find practical. A good video card is often much more than a robust 3D renderer; be sure to examine what you want and need your card to do, such as digital (DVI) output, TV output, multiple-monitor support, built-in TV tuners and video input. Another reason you need to carefully research is that manufacturers will often use confusing model numbers designed to make a card sound better than it is to sell it better. For example, the NVIDIA GeForce RTX series claim to be part of the current line up (as of April 2023, the 4000-series of cards), however, they are inadequate for modern gaming, in many cases, and perform much closer to old, mid-end 2000 series cards than to the RTX 3000/4000 series cards.
+API Support
+Graphics cards provide various APIs to let software developers make programs that work for multiple GPU devices, without needing to make a specific version for each GPU. Games are very likely to require support for graphics APIs; multimedia or 3D graphics software also often uses graphics APIs. Most software that uses a GPU will require one or more APIs to be available and the API to be at a minimum version.
+There are a few graphics APIs to look out for.
+Vulkan - A modern API for Windows and GNU/Linux.
+DirectX - The Windows-exclusive graphics API.
+o	DirectX Raytracing - An extension to DirectX for raytracing.
+OpenGL - The old competitor to DirectX that works on Windows and GNU/Linux.
+If you are using high-end productivity software that can leverage a GPU, you should also look out for GPGPU APIs. Your software will specify which it can use.
+OpenCL - A cross-platform API for GPGPU software.
+CUDA - NVIDIA's exclusive GPGPU API.
+There are also a few APIs and pieces of Middleware that are generally focused on games. Unlike the above, software that supports these features will typically work fine on unsupported cards, just with reduced features.
+GPUOpen - A collection of open source game dev tools, made by AMD for all systems.
+o	TressFX - Offers simulations of hair, grass, fur, and similar materials.
+o	FireRays - Cross-platform raytracing.
+Nvidia GameWorks - NVIDIA's game dev tools for their own cards.
+o	Nvidia RTX - NVIDIA's real-time ray tracing platform
+o	OptiX - NVIDIA's productivity-focused ray tracing platform
+o	PhysX - NVIDIA's physics library. PhysX can be run on the CPU if an NVIDIA card is not present.
+Interface
+The vast majority of graphic cards use the a 16x PCI-Express interface[3]. This will typically provide the best performance and is what most Graphics Cards are designed to be used with.
+If you need an extremely small case, or would like to easily swap your GPU to other devices that can't accept PCI express cards such as a laptop, it is possible to get an external GPU enclosure that connects to your system through a thunderbolt port. These enclosures are expensive and reduce performance somewhat, but provide unique flexibility.
+Video Output
+Graphics cards offer a variety of ports to display pictures. Each port type has versions associated with it.
+HDMI - A high end proprietary output standard that's common on consumer electronics.
+Displayport - A high end output standard that's common on computers.
+Some GPU are compatible with variable refreshrate monitors.
+FreeSync - AMD and recent NVIDIA cards both support FreeSync.
+G-Sync - NVIDIA's proprietary adaptive sync solution.
+Keep in mind that to provide best picture quality your graphics card must be capable of displaying the same resolution as your LCD display's native resolution.

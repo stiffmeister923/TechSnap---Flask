@@ -1,0 +1,6 @@
+Some cables are attached to pins on a board (e.g. motherboard or extension card)
+In order to turn the computer on, you will need to connect the power button and while you are at it, you might as well do the reset buttons and front panel lights as well.
+There will be a set of pins, usually near the front edge of the motherboard to which you will attach the cables sometimes already connected to the front of the case, or if needed to be supplied with the motherboard. Most of the time the plugs will be labeled as the pins they will connect to in the motherboard, there they can be difficult to read since the print is very small or you may not be in the right orientation to do so. The documentation that came with your case and motherboard should tell where these connectors are.
+The front panel LEDs are polarized: usually the positive wire is a color while the negative wire is white or black, this may be important if you have to do alterations or do not have the proper cables.
+In addition, you can connect any case-specific ports if they are supported by the motherboard. Many cases have front mounted USB ports and audio jacks.
+Other connections of this type to remember can be power for the CPU fans, various temperature sensors and Wake-on-LAN cables (if the feature is supported) from the network card to the motherboard.

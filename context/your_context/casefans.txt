@@ -1,0 +1,1 @@
+Case fans can be slowed down by using fan-speed controllers, or resistors (but beware of insufficient cooling). Also, they can be replaced with higher quality (ball bearing) or (sometimes) larger fans, both of which will make less noise.

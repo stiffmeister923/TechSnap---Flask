@@ -1,0 +1,2 @@
+An example of an immersion cooling setup.
+Some people are experimenting with cooling personal computers by immersing them almost completely in non-conductive liquids such as transformer oil and flourinert.

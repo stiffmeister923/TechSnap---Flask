@@ -1,0 +1,23 @@
+CPU
+Choosing the CPU
+While the CPU is usually the best component to overclock, most CPU's these days are locked, which means that the multiplier cannot be changed from its default clocks. While previously (until Sandy Bridge), users used to work around this limitation by adjusting the base clock of the CPU, on Sandy Bridge till Broadwell (2nd to 5th), attempting to do so over a few megahertz would usually cause the system to crash, even if the CPU itself is stable. This is because increasing the base clock would also affect other system components.
+This means that, at a best case scenario of a 5 MHz increase over the usual 100 MHz base clock, an i3-4370 (3.8 GHz) can only be overclocked by 38*5 = 190 MHz, which would increase the clock speed to only 3.99 GHz.
+This limits your Intel CPU choice to the following, if you want to overclock:
+1.	CPU's labelled with a K at the end of their model number (eg:- i5-13600K)
+2.	Extreme Edition processors (X series). An example would be the 12-core i9-10920X.
+3.	Pentium G3258 (more on that later)
+4.	C (high end graphics) line.
+Most (if not all) AMD Ryzen CPU are overclockable; it is not necessary to buy the highest-end model (aka the X variant) solely for overclocking, though such variants may include better coolers instead.
+For Intel chips, these overclockable chips usually come at a 5-15% premium over the non overclockable but otherwise identical CPU.
+Now about the Intel Pentium G3258. This chip caused a lot of hype when it was first released back in 2014, as it was the cheapest and lowest-end Pentium chip released by Intel in honour of its 20th year anniversary. However, the main steal in this is the fact that this CPU is highly overclockable, which made all the difference. Still though, it won't reach the level of a stock i5 with overclocking; its dual-core no hyperthreading design can hurt it badly, and it's now over 9 years old. If you really need to build an ultra-budget PC, then a Ryzen 3 or a non-overclockable Pentium Gold processor would be a better choice.
+The integrated graphics (if present) on the chip can often be overclocked even on otherwise non-overclockable CPU's.
+How to overclock
+For older computers, one changes the clock speed of the CPU in the BIOS. This holds true for newer computers as well, but you can usually use Intel's Extreme Tuning Utility (XTU) or AMD's Wattman if you want to do it in Windows itself. This method, while probably safer, is not the best method to overclock.
+Assuming that you have a multiplier-unlocked CPU, head on to the BIOS, look for a CPU-modifying option within the BIOS (it depends between manufacturers), and raise the All-Core multiplier by a notch(For example, if you have a 3.5 GHz chip with a multiplier of 35x, raise it to 36x).
+Then boot back into Windows and then run a stress tool like Prime95. It is a good idea to run it for some time (like an hour) but not for too long as you may end up damaging your CPU instead. Keep a watchful eye at the CPU temperatures; you should not go over 85C. If you do, you may need a better CPU cooler. Do NOT use the stock cooler if you are overclocking!
+If it passes, go back into the BIOS and increase the multiplier again by a notch. If it fails, return back to the BIOS and then raise the CPU voltage slightly. Then repeat the stress test.
+Continue this process till
+1.	The stress test has failed and you've applied enough voltage, or
+2.	The CPU is running too hot.
+3.	The CPU is throttling (reducing speeds)
+It is important that you do not apply too much CPU voltage as you may end up damaging the CPU. Also remember to keep any adaptive voltage settings on, as they reduce the voltage and prolong the life of your CPU when it is in idle.

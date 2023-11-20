@@ -1,0 +1,16 @@
+Some peripherals serve more niche uses. Though they are not needed for all users, you may find such devices useful if they compliment your specific needs, work or hobbies.
+Accessibility
+ A refreshable braile display used underneath a keyboard.
+You may benefit from accessibility tools if you have an impediment, such as foot pedals, large button gadgets, or other devices.
+Refreshable braile displays and screen reader software can help users with visual impairments
+Security
+Hardware 2FA keys are a good idea for those who value security. These keys typically plug into a USB port and can be used as an extra layer of security on top of a password. A special webcam that uses structured light or a finger print reader can be used for Windows Hello.
+If you are using a disk encryption solution like Windows BitLocker, it may be worthwhile to get a Trusted Platform Module made after 2018. This is a small piece of dedicated hardware that handles security related tasks. This requires that both the module and the motherboard are compatible with each other, both on a hardware level and a software level.
+A port blocker or case lock may be OK for stopping casual mischief if you have regular guests or roommates, but most commercially available products in this category will not stand up to either a modestly talented tinkerer, or simple brute force.
+Gaming
+Fans of specific game genres may benefit from a flight stick, a stearing wheel, fight pad, arcade deck, or console style controller. There are also more esoteric control devices available, based on EEG readings, gesture recognition, or other unconventional inputs.
+A video capture card can be used to record or stream the output of a game console or even another PC without impacting framerates.
+Streaming decks can help save time during livestreams.
+Creating
+ Drawing tablets use special pens to offer more natural input methods for artists.
+Creatives and hobbyists may find workflow benefits from adding specialized peripherals to their workspace such as drawing tablets, MIDI keyboards, mixers, microscopes, 3D Scanners, software defined radios, plotters, laser cutters, or 3D printers.

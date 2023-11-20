@@ -1,0 +1,73 @@
+Intel
+Intel classifies its CPUs using a series of numbers.[6] 2xxx, 3xxx, 4xxx, 5xxx, 6xxx, 7xxx, 8xxx, 9xxx, 10xxx, 11xxx, 12xxx, and 13xxx of which 13xxx denominates the latest generation. Generally, the higher the digit after generation, the faster the CPU and the more expensive. Many CPUs have suffixes: K denotes that the CPU is unlocked so can be overclocked; T denotes the low-power version; F denotes the CPUs without integrated graphics. Here is a list of most modern Intel Desktop CPUs:
+Intel Celeron (Dual/Quad core)
+The Celeron series is a range of CPUs for budget computers and used to feature just one core. The last single core Celeron was released as part of the Sandy Bridge line-up, and since then all Celeron G-series processors have been dual-core.
+The tablet-based Baytrail/Braswell Celeron have either 2 or 4 cores. However , due to their weak IPC , the performance does not match Core i CPU and single core performance is slightly below a Core 2 Duo with the same clockspeed.
+Intel Pentium (Dual core)
+The Pentium series was part of Intel's most popular CPUs. Earlier Intels all featured just one core, although the newer Pentiums feature dual-core support, such as the Pentium D, the Pentium Dual-Core, and the Pentium G-series processors.
+Baytrail/Braswell Pentium are generally quad-core. The weak IPC would generally mean that their multi-core performance would be around the range of a Core M , with half the single core performance.
+Intel Core i3 (2 to 4 cores (desktop) / 2 to 10 cores (mobile))
+These are low end processors that have hyperthreading enabled, allowing them to make use of multi-threaded software more efficiently. This CPU series is made for LGA 1156, 1155, 1150, 1151, 1200 and 1700 , depending on generation. This processor lineup is adequate for most applications, including the majority of games. Since the 9th generation, they have Turbo Boost.
+Intel Core i5 (4 - 14 cores (desktop) , 2 - 14 cores (mobile))
+These are mid range processors without hyperthreading(dual-core variants do have it). Like the rest of the 'i' lineup, they are made for LGA 1156,1155,1150,1151,1200 and 1700 depending on generation. This series can take almost any game without bottlenecking the graphics card. Turbo boost is included , which allows the processor to dynamically overclock to higher click speeds when power and thermal limits allow for.
+Intel Core i7 (4 - 16 cores (desktop) , 2 - 20 cores (mobile))
+Intel's flagship line of consumer microprocessors, these CPUs all have 4 - 16 cores, feature Hyper Threading and feature higher amounts of cache and Intel's new "Turbo Boost" technology, which allows all cores to automatically clock themselves to appropriate frequencies in intervals of 133(Nehalem only)/100(Sandy Bridge and higher) MHz without stressing the processor and risking overheating. This feature is unavailable on LGA775-based Core 2 , but most of them utilize a partial overclock by raising the multiplier by 0.5 when one core for every 2 cores is not in used. This means 2 cores can be turbo overclocked on a Core 2 Quad. It also support DDR4 and, since the 12th generation, DDR5, memory and does not use a FSB (Front Side Bus), but rather uses an Intel QuickPath interface. Turbo Boost is also available on i3 and i5.
+Intel Core i9 (8 - 24 cores (desktop) , 6 - 24 cores (mobile))
+Intel Xeon (2 - 28 cores)
+The Xeon brand was a brand of Intel x86/64 processors for workstations, servers, and embedded systems. The Xeon brand features single, dual, quad, , hexa(actually up to 28). core processors (although don't get excited - remember that these are for servers and similar systems, not your "Ultra-awesome high-tech bleeding-edge owns-everybody-else's computer" with a 790i Ultra SLi motherboard and 4 graphics cards)
+Additional Intel features
+These features may not be there in every model.
+1.	XD Technology: A CPU's model number followed by suffix J signifies XD (eXecute Disable) technology, which is an added security feature on Intel CPUs. Note that AMD processors have a similar technology dubbed EVP, or "Enhanced Virus Protection. Note that it is now included with every processor as it is required since Windows 8.
+2.	VT-X In 2006 , Intel and AMD introduced a feature known as hardware virtualization which boosts speeds when using more than 1 OS at the same time. This feature is available on some Intel Core 2 and most processors after that.
+Naming schemes
+Naming schemes determine how a CPU is named based on its performance , clockspeed and price.
+The consumer logic for processor speed may be misleading because many consumers think that clock speed, which is measured in gigahertz (GHz) or megahertz (MHz) is equal to system speed. While a higher clock speed will allow the CPU to do cycles more frequently and it does have a fundamental effect on speed, it is not the sole factor as the number of calculations (and data handled) per cycle is different for each different manufacturer and model. In addition, other factors, such as FSB speed will affect the CPU's ability to process data efficiently. If the FSB and RAM aren't able to get data to the CPU as quickly as the CPU can process it, then the CPU will spend some of the cycles doing nothing. A cycle during which the CPU does nothing is called a wasted cycle.
+Intel
+Nehalem and higher(Core i architecture)
+The Nehalem/Lynnfield/Sandy Bridge/Ivy Bridge/Haswell series line-up uses a different naming scheme as follows.
+1.	Celeron/Pentium indicates a basic dual core. Pentiums usually have more cache and higher clockspeed than Celerons.
+2.	i3 denotes 2 to 4 cores with hyperthreading (except 8th and 9th generations). Since 9th generation (9xxx), they have Turbo functionality.
+3.	i5 usually denotes 4 to 14 cores with hyperthreading, for 10th to 13th generations, and all feature turbo functionality which allows the processor to raise its clockspeed under load. However, certain(2) earlier low wattage(35W) i5 were dual core hyperthreaded.
+4.	i7 denotes 4 to 16 cores with hyperthreading except 9th generation, and all feature turbo functionality.
+5.	i9 denotes 8 to 24 cores with hyperthreading, and all feature turbo functionality.
+To find the generation and the socket for the processor, it is necessary to look at the numbering of the processors.
+1.	Any cpu that has the i designation and 3 digits is meant for LGA 1156(Nehalem.)
+2.	Any cpu that has the ix-2xxx(Sandy Bridge) or ix-3xxx(Ivy Bridge) type naming is for LGA 1155.
+3.	Any cpu that has the ix-4xxx(Haswell) or ix-5xxx(Broadwell) naming is for LGA 1150.
+4.	Any CPU that has the ix-6xxx(Skylake) or ix-7xxx(Kaby Lake) naming is for LGA 1151.
+5.	Any CPU that has the ix-8xxx(Coffee Lake) or ix-9xxx(Coffee Lake) is for LGA 1151v2.
+6.	Any CPU that has the ix-10xxx(Comet Lake) or ix-11xxx(Rocket Lake) is for LGA 1200.
+7.	Any CPU that has the ix-12xxx(Alder Lake) or ix-13xxx(Raptor Lake) is for LGA 1700.
+The exception to this is the E(Extreme) series of the generation.
+1.	The i7-9xx series(Nehalem) use LGA 1366.
+2.	The i7-3820/39x0 series(Sandy Bridge) and the i7-4820K/49x0 series(Ivy Bridge) use LGA 2011.
+3.	The i7-5820K/59x0 series(Haswell) use LGA 2011-v3 , which is incomparable with LGA 2011.
+For the budget Celeron/Pentium ,
+1.	Celeron G1101/Pentium G6950 is meant for LGA 1156
+2.	Celeron G4xx and G5xx/Pentium G6xx and G8xx series are for LGA 1155
+3.	Celeron G16xx/Pentium G2xxx are for LGA1155
+4.	Celeron G18xx/Pentium G3xxx are for LGA 1150
+Each processor has a letter after the model number which tells the type of CPU. To find out , use this:-
+1.	T:- These types of processors use very less power than other variants(usually between 35-45 W). Some ultra-low power variants use 35 W , while others use 45W. Performance is usually somewhat reduced compared to other variants , especially for the i5/i7 35W variants.
+2.	S:- These types of processors , while using more power that the T series , use less than their usual(no letter) variants. This is found only on i5 and i7 processors and use 65 W. Not present since Broadwell.
+3.	No letter:- These types of processors use the full power. They range from 53 W(up to i5) till 84 W(i5 , i7). Nehalem CPU's can use up to over 130 W. Skylake and later CPU's use only 65W, effectively replacing the S series.
+4.	K/X:- These types of processors , only in i5, i7, i9 and Extreme series and the Pentium G3258 processors , can be overclocked beyond their normal clock speeds. They use between 53 W(Pentium) to over 165W(Extreme).
+5.	R:- These processors(i5 - 4570R/4670R , i7-4770R , i5-5565R/5665R , i5-5775R) are not the ones you'll be building , as they are meant to be used in all-in-one PC types and they do not use the normal LGA1150 , they use BGA1164 socket. This variant has better graphics than the normal CPU's(Iris Pro). They use 65W of power. These processors cannot overclock(which the C series can).
+6.	E:- Embedded processors. Not the ones you'll typically encounter.
+7.	P:- Does not contain Intel's integrated graphics. Applies only to Sandy Bridge and Ivy Bridge. Exception:- i5-6402P
+8.	C:- These are i5 and i7 processors(i5-5665C , i7-5775C) which contain Iris Pro , Intel's top of the line integrated graphics. These processors can overclock and have a S series TDP(65 W). The main difference between it and the R series processors is that the C series uses the standard LGA 1150 socket , which the R series do not.
+and for mobile processors ,
+1.	Y:- Uses very little power , about 11.5(Haswell) to 13(Ivy Bridge)W.
+2.	U:- Uses less power , from 15 to 28 W(though 15W is more common). This SKU is used in computers such as the MacBook Air and Surface Pro 3.
+3.	M:- Uses about 37W , they are found in mainstream notebooks and some all-in-one PC's. i7 quad-core variants can use up to 47W depending on model. This type of CPU is easier to remove(Socket G1/PGA) , though not as easy as the desktop variants. Also you may have to find your desired replacement CPU on the Internet , as you would not find mobile Intel CPU's in most shops.
+4.	E:- Embedded processors. Not the ones you'll typically encounter.
+5.	Q:- Quad-core. Usually paired with H or Q to indicate a mobile quad-core processor. Example:- i7-4700MQ. Applies only to i7 and i5 since Skylake.
+6.	H:- Used in all-in-one PC's and many laptops, uses about 47W of power(37 W for i3). This type of CPU cannot be easily removed(mostly soldered to the motherboard) because of the type of socket it uses(BGA).
+7.	X:- Extreme series , they can be overclocked. Uses about 57W of power. These processors are very expensive and are found only in i7's. Exception - i7-6820HK , which is around the same price as a standard quad-core i7.
+8.	C:- Special embedded processors.
+9.	Core M - Considered as the successor of the Y series of Haswell , these processors are used in ultra-light tablets and notebooks. These processors have a TDP of 3.5-7 W that can be configured by the manufacturer if required. Some devices come without a fan at this level.(eg - MacBook)
+Note:- There are some exceptions to this. This applies only to Nehalem(1st generation i series and higher)
+1.	The i7-3820 processor is overclockable , but has a multiplier limitation of 43x which can be partially overcome by increasing the BCLK speeds. This processor is an Extreme i7 processor and uses 130W.
+2.	Nehalem ultra low low-wattage mobile(18 W) CPU's are marked as 'UM' and not just as 'U' as in Sandy Bridge and later.
+3.	Nehalem low wattage models(26 W) mobile CPU's are marked as 'LM'. Sandy Bridge and Ivy Bridge do not have this , and Haswell(28 W) are marked as 'U' only.
+4.	i7-6820HK is overclockable.

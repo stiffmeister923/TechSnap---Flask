@@ -1,0 +1,3 @@
+Privacy concerns
+Modern CPU designs have raised a number of interesting privacy concerns. Both Intel and AMD CPUs have features designed for corperate users that are opaque to regular users, and have represented security risks in the past. The Intel Management Engine has been used on Intel chips since 2008. The AMD Platform Security Processor is similar to Intel's Management Engine and has been used on AMD chips since 2013.
+A number of security vulnerabilities such as Meltdown and Spectre were found in the late 2010's. Sometimes, but not always, hardware vulnerabilities can be patched by microcode or handled by the operating system, but often at significant performance costs.

@@ -181,6 +181,17 @@
                         </div>
                     
                         <div id="overlay" class="overlay" onclick="closeModal()"></div>
+                        <form action="/answer" method="post">
+                            <label for="question">Enter your question:</label>
+                            <input type="text" id="question" name="question" required>
+                            <button type="submit">Get Answer</button>
+                        </form>
+                        {% if question %}
+                            <h2>Your Question:</h2>
+                            <p>{{ question }}</p>
+                            <h2>Answer:</h2>
+                            <p>{{ answer }}</p>
+                        {% endif %}
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-12">

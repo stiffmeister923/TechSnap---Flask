@@ -1,0 +1,7 @@
+Before buying software for your new PC, remember that there is an abundance of useful software, free for downloading, available on the Internet. From web browsers to word processors to graphic manipulation programs, there is plenty of software available online.
+Though most of what is available is safe and useful, it’s always a good idea to do a little research and make a backup before installing anything new. The following are some proven and reliable programs that are available, free (or gratis), for individual use (and sometimes more; check the license).
+Broadly speaking, there are three types of licenses:
+Proprietary - This is the type of license that comes with most software that is purchased. Source code is not available, and you cannot make copies for others.
+Freeware - The software is zero cost (free), and you may share copies with others. You cannot make copies and sell them, however. The source code is usually not available.
+Free software/Open Source - The source code is available. This means that if you know how to program, you can make and distribute variations of the program yourself, fix bugs you find, etc. You may share copies with others, and you may pay for the software on disk, or download it for free. (The "free" in "free software" refers to "free" as in "free speech", not as in "free beer".)
+Of course, there is a lot of overlap and many exceptions to these generalizations. Be sure to check the license that comes with your software to be sure of what your rights are!

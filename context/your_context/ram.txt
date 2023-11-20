@@ -1,0 +1,17 @@
+RAM capacity plays an important role in the computer's operation speed, as it provides the operating system caching space that allows foregoing access to the local disk, typically the main bottleneck of computer speed.
+The amount of random access memory (RAM) to use has become a fairly simple choice. Unless one is building on a very restricted budget, one just has to choose between installing 8 or 16 gigabytes. 8 gigabytes of RAM is plenty for most modern operating systems, but all of them will run a little faster with 16 gigabytes. While 32-bit operating systems can address 4 gigabytes, they can utilize little more than three gigabytes as system RAM (actually 4 gigabytes minus Video RAM minus overhead for other devices). If one wishes to utilize the full 4 (or more) gigabytes of RAM, one needs to install a 64-bit operating system. It really comes down to a financial decision. Some specialized applications may profit from more than 16 gigabytes of RAM. If one plans on using such, make sure to check that both the operating system and the motherboard will accommodate the amount of RAM one has in mind. One might also choose to get 8 gigabytes of high quality RAM over 16 gigabytes of lesser quality, especially if one plans to overclock, though that is quite rare now.
+Another thing to consider when choosing the amount of RAM for one's system is the graphics card. Most motherboard-integrated graphics chips and PCI Express graphics cards marketed with the "Turbo Cache" feature will use system memory to store information related to rendering graphics; this system memory is generally not available at all to the operating system. On average, these graphics processors will use between 64 megabytes and 512 megabytes of system memory for rendering purposes.
+The actual type of RAM one will need depends on the motherboard and chipset one gets. Old motherboards use DDR (Double Data Rate) RAM, DDR2 or DDR3. DDR5 is the current industry standard. Chip sets that use dual-channel memory require one to use two identical — in terms of size and speed — RAM modules.
+If one is upgrading an existing computer, it is best to check if one's machine requires specific kinds of RAM. Many computer OEMs, such as Gateway and Hewlett-Packard, require custom RAM, and generic RAM available from most computer stores may cause compatibility problems in such systems.
+Overclocking of RAM is possible, but you will have to keep the same precautions(actually more) for RAM. If your RAM temperatures get too high, they can get damaged. For this purpose, there are dedicated RAM coolers that can be used, but most will not find any need for them. The benefit of overclocking RAM, unlike overclocking your CPU, is limited to a few applications.
+Labelling of RAM
+RAM is labelled by its memory size in gigabytes (GB) and clock speed (or bandwidth).
+For example,
+1.	DDR5-4800 16 GB is a 16 GB DDR5 stick running at 4800 MHz
+2.	LPDDR5-6000 8 GB is a low-power DDR5 stick running at 6000 MHz. Commonly seen in laptops, but also seen in some desktops.
+DDR RAM has 5 versions: DDR (also DDRI), DDR2 (or DDRII), DDR3, DDR4 and DDR5. DDR, DDR2 and DDR3 are currently obsolete.
+1.	DDR5 supports DDR5-4800 and higher.
+2.	DDR4 supports DDR4-2133 to DDR4-5333[2] (generally overclocked).
+3.	DDR3 supports DDR3-1066 to DDR3-3000 (generally overclocked).
+4.	DDR2 supports DDR2-533 to DDR2-1250 (generally overclocked).
+5.	DDR supports DDR-266 to DDR-533.

@@ -1,0 +1,12 @@
+Keyboards are made in a variety of formfactors and styles.
+Keyboard specifications
+Keyboards most commonly come as membrane keyboards, but if you plan on typing for long periods of time a mechanical keyboard may help improve your typing experience. Stores will often have display model keyboards that you can test to find your preferred style.
+Key rollover is the number of keys a keyboard can read simultaneously, and is an important factor for power users and gamers. Most keyboards support at least a few keys being pressed at one time. High end keyboards support N key rollover and can accept an arbitrary number of keys at the same time.
+Keyboards sometimes come with extra non-standard features, such as multimedia controls, or small displays.
+Keyboard formfactors
+Ergonomic keyboards also exist that can help reduce repetitive strain injuries.
+Keyboards come in a variety of sizes. Full size keyboards are the most common. Ten keyless keyboards eliminate the number pad for a smaller size. Some smaller keyboards are categorized by the percentage of keys removed compared to a full size keyboard, typically ranging from the mostly normal 75%, to the tiny 40%.
+Keyboards come in either wired or wireless models. Wired keyboards are very straightforward, and since they do not need to be moved as a mouse does, they are often preferable for desktops. Wireless keyboards do not now display the sort of noticeable delay that they once did, and now also have considerably improved battery life. However, gamers may still want to avoid wireless input devices because the very slight delay may impact gaming activities, though some of the higher end models have less trouble with this. The occasional need to replace or charge batteries is also an inconvenience.
+Keyboard accessories
+Some keyboards allow for swapable keycaps, allowing you to customize the look of your keyboard. If your keyboard supports this, you will want an appropriate keycap removal tool to make the process easier.
+If your keyboard does not come with a wrist rest, third party rests are commonly avalible.

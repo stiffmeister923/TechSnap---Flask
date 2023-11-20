@@ -1,0 +1,10 @@
+You won’t need many tools to assemble your computer, in fact the only one you must have is the screwdriver, but if you can get most of the following together, you’ll find things go a little easier.
+Basic tools
+Before you begin building or refitting a computer, you should have some basic tools like a 2 Phillips-head (cross-shaped) screwdriver,Needle-nose pliers ,A large level working space, a Brush and a An anti-static wrist strap with crocodile clip.
+Optional, but useful tools
+Some other tools and equipment can come in handy as well, such as:
+Anti-static Wrist Strap (Highly Recommended), An Anti-static mat can help provide a safe place to set components down. Spring action parts grabber.
+Electrical tape, Wire or nylon ties, Flashlight, preferably hands-free ,A second, working computer to swap parts, look for tips, ask for help on-line, download drivers and patches, etc. - very useful, A can of compressed air - useful when working with older parts that have collected dust. A better alternative but also more costly, is a vacuum cleaner designed for cleaning electronics.
+Magnetic screwdriver, Zip ties or velcro ties for cable management
+Safety precautions are important for your own security. Please read the safety precautions thoroughly.
+

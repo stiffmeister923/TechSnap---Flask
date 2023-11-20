@@ -1,0 +1,6 @@
+The above screenshot shows the process of undervolting in ThrottleStop - click (1) and adjust (2). -50 mV to -100 mV is around the tolerance range of most laptops.
+Instead of raising Vcore during overclocking, you could also simply reduce Vcore and stay at stock clock speed. This is possible because modern CPU's are ususually set at a voltage above the voltage it really requires so as to account for manufacturing variances. The advantage to undervolting include
+Lower heat output and power consumption,Potentially higher performance (since the CPU can boost for a longer period and will hit the TDP limit less often) ,It works with any CPU; an overclockable CPU is not required.
+Laptops can benefit the most from undervolting; their thin chassis means that power and temperatures play a greater role than in a desktop.
+Similar to overclocking, one can undervolt the CPU using tools like Intel Extreme Tuning Utility, ThrottleStop or in the BIOS. For Ryzen Mobile CPUs, an open-source tool AATU (AMD APU Tuning Utility) can be downloaded here, which would especially help if your laptop is throttling due to STAPM (skin temperature) issues.
+Remember that just like when overclocking, you should start slowly and also test the stability of the CPU undervolt (eg: by running Prime95).

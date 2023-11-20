@@ -1,0 +1,9 @@
+A visual representation of typical network speeds, as well as the cabling required to support those speeds.
+Wired NIC
+A PCI Express 1x network interface card. The bracket at the top can be swapped with the included bracket for use in low profile cases.
+A Network interface card (NIC for short), or Ethernet card, is required in order to connect to a local area network or a cable or DSL modem. These typically come in speeds of 10Mbps, 100Mbps, 1000Mbps (gigabit) or 2.5Gbps; these are designated as 10Mbps, 10/100Mbps, 10/100/1000Mbps or 2.5Gbps products. The 10/100/1000Mbps parts are most common in use today. In many cases, one or two Ethernet adapters will be built into a motherboard. If there are none, you will have to purchase an adapter. These typically cost less then $20 and are inserted into a expansion slot.
+Most motherboards now feature either a 10/100/1000Mbps or a 2.5Gbps ethernet port and are adequate for most users.
+Typically networks are only as fast as their slowest component. Speeds can be negatively affected by factors external to your computer such as old or improperly installed network cable, or an outdated router.
+Wireless NIC
+A wireless network interface card can be used to add Wi-Fi and Bluetooth support to a computer. These cards are typically installed in a similar way to an Ethernet NIC, but have antennas or antenna mounts instead of an Ethernet jack. External USB versions are also available.
+Many internal adapters will come with detachable antenna. Antenna come in a variety of form factors, and designs. A big factor in antenna choice is weather or not to get an omnidirectional antenna that does an decent job most of the time and reduces the need for optimal positioning, or a directional antenna that offers stronger signal but can only work well when positioned correctly.

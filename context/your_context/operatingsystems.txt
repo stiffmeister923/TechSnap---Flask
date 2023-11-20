@@ -1,0 +1,32 @@
+Main operating systems available
+Microsoft Windows - Windows 10/11 (Home/Pro).
+Popular Linux Distros - Ubuntu, Linux Mint, OpenSUSE, Fedora, Debian, and others
+Popular BSD Variants - FreeBSD, OpenBSD, NetBSD, and others
+Android - A variety of Android based operating systems exist for x86 Personal computers. While not ideal for the desktop form factor, they are free and offer compatibility with Android's software library.
+MacOS - You can install MacOS on non-Apple hardware which is called "Hackintosh" in which an end user installs MacOS on a non-Apple computer. Be warned that this is risky and takes more knowledge than other operating systems.
+Windows information and hardware support lists
+Microsoft Windows is a series of operating systems made by the Microsoft corporation. Thanks to its popularity and widespread support Windows is ideal for most personal computing and fits the needs or wants of just about anyone: gamers, video/graphics editors, office workers, or the average user who wants to surf the web and play a bit of solitaire.
+In general Windows supports most available consumer processors from AMD or Intel, as well as most internal and external devices, including Graphics Cards, Wi-Fi adapters, and specialty hardware.
+For general consumers, Windows comes in a few flavors:
+Windows 11 Home is the basic version of Windows 11 and costs about $140, but purchases from bulk retailers can be as cheap as $50.
+Windows 11 Pro is the more advanced version of Windows 11 and costs about $200. This version includes business-oriented features like drive encryption, better virtual machine support and a built-in remote desktop function.
+Windows 11 Pro for Workstations provides support for workstation-class hardware such as motherboards with multiple processor sockets and costs $310.
+If you are a student you may be able to get a free version of Windows 11 through your school using Azure Dev Teaching (formerly Imagine Premium).
+Any Windows 7, 8, 8.1 or 10 product key can be used to activate a copy of Windows 11. This essentially gives you a free upgrade from an older version of Windows to the latest.
+Microsoft maintains a list of hardware compatible with Windows.
+Linux information and hardware support lists
+As one of the most popular open-source (free) operating systems, GNU/Linux is a good alternative. Linux is a UNIX-like series of operating systems and comes in many different distributions, called "distros" for short. Popular distros of Linux intended for the desktop include Ubuntu, Debian, openSUSE, MX Linux, Elementary OS, Fedora, KDE, Linux Mint, and Arch Linux.
+Linux has applications that can match most of the functionality of their proprietary alternatives. It should be noted, however, that many popular programs are not available for Linux, and the only way to run them is with special compatibility layers like Wine, which may or may not work with a specific program, or could only run with significant issues.
+Unlike Windows, drivers in Linux are usually included in the distro. This means different distributions will support different hardware (generally more 'bleeding-edge' distributions will support newer hardware – look at Fedora, SUSE or Ubuntu, compared to the latest stable release of Debian). A search online will normally establish compatibility, otherwise a good rule of thumb to figure out compatibility is to buy hardware that is 12 to 18 months old, as it most likely has Linux support with most distributions, but won't be too old.
+Graphics Drivers on Linux are interesting. AMD GPUs typically work fine out of the box thanks to the manufacturer backed open source AMDGPU driver project, where the community open source nouveau project generally works well, but not to the same level as Nvidia's Proprietary drivers, which many distros do not include out of the box due to the licensing used by the driver. Intel Integrated Graphics typically works very well in Linux.
+BSDs information and hardware support lists
+BSD, or the Berkeley Software Distribution, is also a UNIX-Like series of operating systems and could be considered the alternative to Linux. BSD is an open-source (free) operating system and has its own descendants, such as FreeBSD and OpenBSD. Unlike Linux, BSD tends not to support "new" hardware but can handle a lot of both older and modern components. BSD and Linux share a variety of applications supported on both operating systems.
+DesktopBSD, see FreeBSD 5.4/i386 and FreeBSD 5.4/amd64
+Dragonfly BSD
+FreeBSD
+NetBSD
+OpenBSD
+PC-BSD, see FreeBSD 6.0/i386
+If you're going to build a computer from scratch for a specific purpose, you'll want to select each component with your use case in mind. Consider what you want to use the computer for, you may be able to save money by specifying expensive, premium parts only where needed.
+Any reasonably configured computer built from current components will offer adequate Internet browsing and word-processing capabilities. For an office computer, this is often all that is needed. As long as you provide enough RAM for your chosen operating system (4 GB at least), any processor you can buy new will provide acceptable performance. If the computer is for gaming, a fast processor and the addition of a high-end graphics card and extra RAM will provide a more satisfactory gaming experience. Besides gaming, computers intended for video editing, serious audio work, CAD/CAM, or animation will benefit from beefier components which are specifically designed for that purpose.
+Here are some general system categories. Your own needs will probably not fit neatly into one of these, but they are a good way to start thinking about what you are going to use your computer for. With each we’ve indicated the components you should emphasize when building the system and we've also included sample builds for each configuration, which you're free to modify it to fit your needs and budget.

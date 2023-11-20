@@ -1,0 +1,134 @@
+Now that you’ve got a functioning computer, you’ll need to install some software if you’re going to do anything with it. An operating system or two must come first, then hardware drivers (so that the operating system can access your hardware) followed by security software and utilities. And that’s as far as we’re going to go with you, but you’ll also want to install some application software – games, word processors, databases, programming languages – whatever floats your boat... That’s pretty much the point of this whole computer business after all, though I hope you’ve found the journey of building it yourself has been worthwhile in its own way.
+In this section we’ll consider what software you’ll want to install and how you might go about doing so.
+BIOS updates
+One important step that can be required as the starting point after you have a working PC, depending on how stable your BIOS is (bugs or any lacking specific software and hardware support), is to do an update of it (called "flashing" the BIOS). This step can be overlooked if you are sure that any later versions of your BIOS will not solve any issues or requirements you have. The simplest way as an initial step is to, find another computer, download the flash update and put it on a USB thumb drive (or another a bootable support media) and boot the new computer with it. If you do not have another computer or thumb drive, you will need to put off this step until after you install the operating system (you can also use a boot disk that permits you to get an OS running out of it) to get the new computer connected to the network.
+Operating system(s)
+If you have a workable machine that recognizes the basic hardware (CPU, memory, HD, mouse and keyboard) you can now start installing an operating system (OS). You may select from several available on the Internet or from your local computer store.
+Options can be varied, there are many operating systems to choose from, including commercial ones like Microsoft Windows (of which the current version is Windows 11 version 22H2) or free ones like GNU/Linux distribution (a free software operating system) or BSD. It all depends on the uses you will be giving to your machine (function and required software) and the price tag you are willing to pay and the support you require. Simply put, can you accomplish your day to day tasks with the software that will run under the operating system in question? Do you require some special software availability, ability to run on older equipment? Have you considered the costs? Determine your needs before installing an operating system.
+Note that you also have the option of installing more than one operating system in what is called a multiboot setup. Having installed an OS, you can always install another later. The complexity of doing so may vary, depending on how the last one automates (or not at all) the process. If your multi-boot setup is Windows-only, install the oldest Windows version first.
+Note:
+If you are going to install Windows OS in a multiboot setup, you should start by installing Windows first. This is because Windows tends to overwrites the software that GNU/Linux requires to start up, even if something is already there. Newer versions of Windows tend to be more cooperative.
+Installing Windows
+The installation of Windows is relatively easy. Push the power button on the front of the PC, put the DVD-ROM in your optical drive or insert the USB, and follow the on-screen instructions (you may have to configure your BIOS to start with the DVD or USB). If you are doing a Windows-only install, just allocate all of the hard drive to Windows.
+Some people find that it's useful to create separate partitions for the operating system and data. This means that if something goes wrong with the operating system, the partition can be formatted and the operating system can be reinstalled, possibly without losing data. If you have already allocated the whole disk to 1 partition and you want to change it later, you can do so and create new partition (from the existing partition) using Disk Management in Windows Vista and later or use a third-party tool.
+If you are installing Windows on a RAID drive, or a SATA drive in some cases, you are going to have to provide drivers to the Windows installer so that it can access the hard drive on the raid controller. At the prompt where you are asked to choose a partition, you can click Load Driver and browse (or ask Windows to search) for the driver. Unlike Windows XP, you are not limited to floppies; a USB flash drive suffices.
+It's a good idea to save your license key for windows in a safe place in case reinstalling becomes necessary.
+Installing Windows to dual-boot with GNU/Linux
+ Dual booting allows you to select your operating system on boot.
+If you are dual-booting, some extra factors must be considered. NTFS, which is the default file system that Windows uses, is fairly well supported in Linux. NTFS-3g has reached a usable stage, with users reporting no data corruption or loss during ordinary use of the latest versions of the driver, providing GNU/Linux users with a reliable way to read and write NTFS partitions. This system is now in widespread use and most up-to-date Linux distros will support the NTFS file system. Previously only read support was safe, and this may still be the case for some distributions. However, NTFS does have some advantages over FAT32, in that a 4GB file size limit no longer exists. Though Linux supports NTFS, Windows does not have built-in support for any of the standard GNU/Linux file systems. However, there are Windows applications, such as Ext2 IFS that can be used to read/write ext2 and ext3 systems.
+When it comes to partition the hard disk(s), remember to leave space for GNU/Linux (a good amount is on the order of a third of your total hard disk space). You may want to have a spare FAT32 partition (of around one third of your disk space) on which to share documents between Windows and GNU/Linux. Though this will most likely not be necessary unless you are using a distro which cannot read/write NTFS. You should also modify the partition table as necessary - you may not need as much space for Windows or you may need more in your FAT32 transfer area. But you must ensure that you leave at least 30 GB for your Windows installation, since the standard installation of Windows takes up about 10-15 GB of hard drive space, and it is always wise to leave extra on, to allow for any changes that may occur. Windows 8 in particular blocks installing on drives less than 16GB (20GB for 64-bit) free space. If you have 16 GB or higher RAM, you'll need more space.
+Installing GNU/Linux
+See also: Linux Guide
+See also: Wikipedia:List of Linux distributions
+See also: Wikipedia:Comparison of Linux distributions
+The primary problem faced in installing GNU/Linux is choosing between distributions. Of the many variants of GNU/Linux, Fedora, SuSE, and Ubuntu are generally recommended, as they are updated regularly and compatible with a broad range of hardware:
+•	Ubuntu, widely regarded as one of the easiest to use versions of GNU/Linux. The amount of community documentation and support makes this a solid choice for a beginner.
+•	Fedora, a distribution known for it's pursuit of leading edge tech while remaining stable.
+•	openSuSE, A feature rich distribution and relative of SUSE Linux Enterprise.
+•	Debian, not feature packed, but a very stable operating system and a solid base for learning more about GNU/Linux.
+Some GNU/Linux variants may support hardware that these do not. If you have obscure or old hardware, you may want to search forum sites for various GNU/Linux variants to ensure compatibility. For example, Puppy Linux is a small Linux distro designed to run on older systems.
+For example, let’s consider Ubuntu. It's a variant of Debian, and is the current standard for easy-to-use GNU/Linux distributions. One can download the .iso image or order a DVD (containing a combined installation and Live disk) from its website. An .iso is nothing more than a special file format that your CD drive burning software uses to create a copy of the software, in this case a copy of Ubuntu GNU/Linux.
+The installation of most distros GNU/Linux is relatively easy. Push the button on the front of the PC, put the disk in your optical drive, and follow the on-screen instructions. By default, the installation version of Ubuntu will erase all files on the hard drive and partition 1.8 GB for the OS. If you want to customize, follow the on-screen instructions carefully. The LiveDVD version does not erase your hard drive and is intended solely for a user to test drive Ubuntu GNU/Linux.
+When installing a GNU/Linux distro, you may be asked to choose between alternatives – whether to run KDE or Gnome (The desktop interfaces), for instance, or to install vi or Emacs or nano (Text editors). If the terms are unfamiliar a quick Google search will usually yield answers. Most choices have comparable features, and the choice usually comes down to preference. It can be a good idea to "Distro hop" or trying multiple different distros in a short period of time, to figure out what works best for you.
+ecurity
+After installation, security should be your priority.
+Updates
+From time to time, software companies and independent programmers release new and improved versions to their software; these are known as updates. Updates usually install new features or fix problems. Usually, you should download the latest updates to improve system performance though it's sometimes wise to wait a little while to be sure the update itself does not cause problems. Many programs update themselves and this process is known as an automatic update. If you have to manually update your software, do so through the software developer's site, not through a secondary source. This approach will reduce the chance of contracting a virus or other piece of malicious software.
+Windows
+A newly installed computer can be attacked within moments of being connected to the Internet. In severe cases, the attacks can render a system unbootable or make a second reinstallation faster or easier than manually removing the malicious programs causing the problems. To avoid having your new computer attacked, install a firewall, or activate the one that came with your OS. Both Windows and GNU/Linux have in-built firewalls: in some GNU/Linux distributions, it is enabled by default. Windows 10 includes an antivirus, but you should update to the latest version for better protection against current threats.
+As soon as you are on the Internet, run your operating system's update facility to fix any security flaws that have been found since your CD was printed. To do this before Windows 10, simply click on your Start Menu, click on 'All Programs', and then click on Windows Update, and follow the instructions. On Windows 10, open Settings and click Update and Security .
+GNU/Linux
+ The YaST (Yet another Setup Tool) Control Center
+The method of updating your GNU/Linux system varies greatly from distribution to distribution.
+For SuSE, there are two ways:
+1.	YaST (Yet another Setup Tool), the default package manager/system management tool for SuSE
+2.	ZENworks updater, a GUI-based updating service
+For Fedora, type
+dnf update
+as the root user inside a terminal window.
+It is perhaps easiest to update the OS from Debian-based distributions such as Debian, Ubuntu and Linspire. For Debian and Linspire you type the following into a terminal window while running as the root user:
+apt update
+apt-get dist-upgrade
+Ubuntu has you run sudo to switch run a program as root. Type the following into a terminal:
+sudo apt update
+sudo apt-get dist-upgrade
+Most distros, including Ubuntu, also have a GUI-based updater program.
+Automatic updates
+If your computer will be running overnight (or if you're just lazy), it may be good to have your computer update itself.
+Debian-based (LINUX) - Debian-based operating systems (including Ubuntu, but Ubuntu already has a more simplified automatic updater) will typically use a cron script for receiving automatic updates by the console (although you can download some GUI-based updating tools - that is, if you're working with a GUI).
+Ubuntu (LINUX) - As Ubuntu is based on Debian, you can use a cron script, but an easier way of doing it (if you're using GNOME) is to go to the "System" menu, then "Administration", then "Software Sources". Then open up the "Updates" tab and select "Automatic updates", also select "Install security updates without confirmation".
+SuSE (LINUX) - SuSE uses YaST to manage updates, packages (applications), and system settings. YaST can be configured to use automatic updates in the YaST control centre.
+Microsoft Windows - Microsoft has always used the Microsoft Update service (formerly called "Windows Update") to manage updates both automatically and manually (although by default it usually is a automatic update). Windows XP onwards reminds you when the computer is needed to be restarted if an update requires one via a special icon in the notification area.
+Windows 10 provides an option of setting active hours; the computer will not restart to complete updates during that time.
+If you have Windows 10 Pro, it is possible to defer (postpone) updates for up to one year or one month, depending on the type of update. It is also possible to completely stop updates for up to 35 days (with the caveat that all updates will then have to be installed before the updates can be stopped again). To configure such options, go to Settings>Update and Security>Advanced Options.
+Note:
+If you have Windows 10(Home), updates are installed automatically, and they cannot be disabled. The options mentioned above do not work for Home.
+Anti-malware
+Anti-virus, anti-spyware, and anti-spam programs (which generically are all called anti-malware programs) of commercial quality or better can be found for free online quite easily and can protect your computer from various nasties you might get while surfin' on the Internet. Windows programs are listed in the software section below. Third-party firewalls for Windows are recommended as the built-in default one Windows provides is not nearly powerful as, for example, ZoneAlarm, a third-party Firewall solution that not only monitors incoming traffic, but monitors outgoing traffic as well. The latest versions of Windows 10 include Microsoft Defender, a antivirus and antispyware program.
+Security software is important and should be set up first. The best procedure is not to connect to the Internet at all until your choice of anti-virus, anti-spyware and firewall software is installed and activated, then connect to the Internet and update each of these programs, though it is usually fine to connect to the Internet for the purpose of downloading it.
+Once secured, your system should be safe for prudent Internet browsing; however, remember to schedule regular scans and keep your security software up to date.
+Drivers
+Now that your computer is relatively secure, you will need to install software to control your various hardware components. This type of software is known as a driver.
+Although you may find that all of your hardware works out of the box, consider downloading the driver straight from the company's Internet site. This will ensure you have the latest edition of the software. Knowing where to download the driver is also good in case you lose the CD that came with the device.
+If you do not have a fast Internet connection (broadband), the company usually provides an option to receive the driver CD in the mail, in which case you'll want to use the CD you have now and update the driver later. Even if something seems to be working fine, downloading new drivers may help increase computer efficiency, though there is always a risk that a brand new version may break something. Downloading drivers for your motherboard's chipset can often help if you are having a problem. Finally, many monitors will not go above a certain refresh rate without the proper driver, which may be of great concerns to gamers.
+If you are using Microsoft Windows, you can generally find drivers for your selected hardware on the manufacturer's website. Most GNU/Linux systems already have all of the drivers installed, with the exception of proprietary modem and graphics drivers. If you can't find the driver you need, a simple Google search will often yield the best results. Windows Update also often can install the latest drivers (though you may have to go to Windows Update to install it, as they may not be considered important).
+Software
+Before buying software for your new PC, remember that there is an abundance of useful software, free for downloading, available on the Internet. From web browsers to word processors to graphic manipulation programs, there is plenty of software available online.
+Though most of what is available is safe and useful, it’s always a good idea to do a little research and make a backup before installing anything new. The following are some proven and reliable programs that are available, free (or gratis), for individual use (and sometimes more; check the license).
+Broadly speaking, there are three types of licenses:
+•	Proprietary - This is the type of license that comes with most software that is purchased. Source code is not available, and you cannot make copies for others.
+•	Freeware - The software is zero cost (free), and you may share copies with others. You cannot make copies and sell them, however. The source code is usually not available.
+•	Free software/Open Source - The source code is available. This means that if you know how to program, you can make and distribute variations of the program yourself, fix bugs you find, etc. You may share copies with others, and you may pay for the software on disk, or download it for free. (The "free" in "free software" refers to "free" as in "free speech", not as in "free beer".)
+Of course, there is a lot of overlap and many exceptions to these generalizations. Be sure to check the license that comes with your software to be sure of what your rights are!
+Windows
+•	Web Browser: Mozilla Firefox, Google Chrome/Chromium, or Microsoft Edge.
+•	E-mail Client: Windows Mail, Mozilla Thunderbird
+•	Office Suite: LibreOffice, Office 365, Microsoft Office
+•	Disc Tools: InfraRecorder, Nero Multimedia Suite
+•	Instant Messenger: Pidgin, Trillian, Telegram
+•	Media Player: VLC media player, Winamp, iTunes, Windows Media Player
+•	Anti-malware: Malwarebytes, AVG AntiVirus, Avast Antivirus, ESET NOD32, Microsoft Defender
+•	Security: Spybot – Search & Destroy, ZoneAlarm Firewall
+•	Utilities: 7-Zip, Rainmeter, Copernic Desktop Search
+•	PDF Reader: Adobe Acrobat Reader or Foxit Reader
+•	Photo Editing: Paint.net, GIMP, Microsoft Paint
+To ease out the installation process for utilities and other basic software, you can use Ninite. Check all the software that you need and download the installation utility. However, note that this utility will only install in your Windows partition and you cannot manually specify the directories in which you want the applications installed.
+You can also get many of these programs (or alternatives) from the Microsoft Store.
+GNU/Linux
+ An example of GNOME Software, a common graphical utility for managing software on GNU/Linux computers
+Unlike Windows, on a GNU/Linux system the majority of the software that you will want for everyday use of your computer is usually included out of the box, or handled by the package manager provided by your distribution. Many distros that focus on ease of use have a graphical interface for installing software that is similar to a mobile phone app store.
+As an example, to install the software git on Ubuntu, only a single command is needed
+sudo apt install git
+The sudo command confirms you have permission to use apt. The apt command calls the apt package manager. install lets apt know you want to install the following item, in this case git.
+Some distros contain an additional package manager, typically either Flatpak, or Snap. Applications installed from these managers run in their own sandbox that limit their access to the rest of the system, increasing security.
+If they aren't already installed by your distribution:
+•	Web Browser: Mozilla Firefox, Google Chrome/Chromium, Konqueror or Opera.
+•	Email Client: Mozilla Thunderbird, GNOME Evolution, or Kmail
+•	Office Suite: LibreOffice, or Calligra Suite
+•	Instant Messenger: Pidgin or Kopete.
+•	Media Players: Kodi, GNOME Videos, Rhythmbox, Amarok, or VLC Media Player.
+•	Movie/DVD Players: Xine or MPlayer.
+•	Disk Tools: Brasero, GParted
+•	Windows Compatibility: WINE, Proton, or Lutris
+•	Virtual systems: QEMU or GNOME Boxes.
+•	Photo Editing: GIMP or Darktable
+•	Art: Krita (2D Raster), Inkscape (2D Vector), Blender (3D Art)
+•	Audio: Audacity, LMMS, Ardour
+Additional Software
+Open source
+For additional software some excellent sources of free and open-source software are
+•	GitHub, GitLab, and SourceForge - Sites featuring many Open Source projects.
+•	Portable Apps - Provides portable versions of applications meant for running on USB keys.
+•	AlternativeTo - Provides lists of alternatives to common software.
+•	Free Software Directory
+Proprietary
+Of course, it is also possible to buy copies of software.
+•	Microsoft Store - Sells software for Windows 10 and 11.
+•	Xbox Game Pass - Microsoft's subscription game service, available for Windows 10 and 11.
+•	GOG Galaxy - Sells games without DRM.
+•	Steam, Humble Store - Large markets of games and some software.
+•	itch.io - Indie game host
+•	Epic Games Store, Origin, Uplay, Battle.net - Publisher focused game sellers.
+•	Adobe Creative Cloud - Sells Adobe creative products through a subscription model.
+•	Autodesk - Sells engineering and 3D Software.
+

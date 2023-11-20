@@ -1,0 +1,4 @@
+Insert the card into a matching slot on the motherboard.
+If your motherboard or CPU has a built-in graphics adapter you want to use (like Intel HD Graphics), skip this section.
+If you have a PCI Express video card, install it into the PCI Express socket. Your computer will have a few of them, but choose the one which is most convenient for you and will allow you to fit it into the desktop case easily. Check your motherboard manual for instructions.
+When your card is properly installed the line formed by the top of the card will be exactly perpendicular to the motherboard, if one side seems to be higher than the other, chances are that it is not fully inserted, press a little harder on the high side or pull it out and try again.

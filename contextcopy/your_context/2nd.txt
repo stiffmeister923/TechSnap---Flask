@@ -1,0 +1,189 @@
+The Central Processing Unit (CPU), also called a processor, is the heart of your computer. A processor takes software instructions (such as turn this 0 into a 1) from your computer (the operating system) and implements these instructions into your hardware. It performs nearly all the actual computation that takes place as the computer is used. The choice of a CPU will affect the ultimate speed of the computer more than any other single component (gaming systems excepted; there the GPU is usually the bottleneck).
+Clock speed
+Clock speed, measured in gigahertz (GHz) or megahertz (MHz) (1 GHz = 1000 MHz), is the number of calculation cycles that your CPU can perform per second. Therefore, a higher clock speed generally indicates a faster processor. But not all CPUs perform an equal amount of work per cycle, meaning two CPUs at the same clock speed can potentially perform at very different levels. Clock speeds should not be compared for CPUs from different architectures (e.g. AMD Ryzen versus Intel i7). Use reviews and benchmarks to judge relative performance.
+IPC
+Instructions per cycle or IPC for short is the amount of work a CPU can do in a cycle. With modern processors this number is an average.
+Multiple cores
+ A chart showing the relation between the number of processor cores, and the amount of performance gained based on how much a task can be parallelized. Most tasks do not benefit from more than 8 or 16 cores, but additional cores can still help maintain performance while multitasking.
+Processors sold today typically include multiple cores. Each core gives the ability to send out 1 instruction, so 10 cores can send out 10 instructions at the same time. This improves performance while multitasking and when running software that supports multiple threads. This also saves money compared to the old way of having multiple cores, which was to install extra processors, which required special hardware and software.
+Adding more cores can seriously improve performance to a point, but cores are not multipliers of performance. A processor with 8 cores will not be twice as fast as a processor with 4 cores running most software, all else being equal. You should look at the recommended requirements of the software you are using, and pick the number of cores based on what it supports - More cores are still better, but not if it requires a significant cost increase or trade-off in clock speed.
+Interface (Socket/Slot)
+CPUs plug into a socket on the motherboard. It is very important that your CPU is a COMPLETE MATCH to your motherboard CPU socket. Plugging a CPU into the wrong socket will never work and will usually break either the CPU, the socket, or both. Think of a socket as a Lego brick (or bread board) connection between the CPU to the motherboard.
+Bit width
+Modern processors are either 32-bit or 64-bit (this is a simplification; The Wikipedia article on 64-bit for details). For our purposes a processor can be called 64-bit if it supports running a 64-bit operating system. The x86-64 processors sold today are 64 bit, with compatibility for older 32 bit software.
+Many complex applications benefit from using a 64 Bit processor, such as Mozilla Firefox[1]. Some programs may only work with a 64 bit processor. A bit stands for a switch between 0 or 1. This is 2 options. 32 bit stands for 2^32. 64 bit means 2^64, which is the size of how much data you can fit into a given unit on the processor.
+Simultaneous Multithreading
+Some higher end processors feature simultaneous multithreading (SMT). Intel calls their SMT platform Hyper-threading which allows each processor core to simulate having two logical processors, effectively doubling the core count as far as the operating system is concerned. AMD Ryzen series CPU have a similar unbranded feature.
+Cache
+ The Memory Hierarchy. Registers offer the fastest storage, followed by L1 Cache. L2 and L3 Cache are slower than L1, but faster than pulling from the main memory.
+Cache is memory implemented directly on the CPU. Data which is being used in computations is stored in the cache as much as possible and can be retrieved from there much faster than the same data can be pulled through the northbridge from main memory. Generally, the larger the cache, the faster the system will run. Cache comes in (usually) three varieties, L1, L2, and L3. L1 being the smallest and fastest, and L3 being the largest and slowest. Usually only the L3 cache size will be shown, as L4 is rarely used in processor design, and L1 and L2 will often stay the same size throughout an entire processor product line. Note that L4 is only in special Intel Haswell high-end CPU's , which contain Iris Pro graphics. They contain an embedded 128MB DRAM inside , which is represented as L4.
+Process size
+The process size is a measurement of size of the components on a chip. In general, the smaller the process node, the better, as more components can be used on a chip, and those components can be made to consume less power. As of 2022 most processors use a 10 nm, 7nm, or 5nm process size, with nodes expected to shrink to 4nm and 3nm eventually.
+PCI Express Lanes
+Modern processors support a given generation of PCI Express, as well as the maximum number of lanes they support.
+Memory Controller
+Modern CPU designs integrate a memory controller into the CPU. This determines the type of memory supported, as well as how many channels can be used.
+High end Intel processors and most AMD processors may support ECC memory, which can correct for errors. This memory is usually somewhat more expensive than regular RAM, and is typically found in workstations and mission critical computers, where crashes and failures must be kept to an absolute minimum. Regular memory is fine for most users.
+ISA and Microarchitectures
+A Instruction Set Architecture (ISA) determines the compatibility of the processor with software. Most desktop CPU models use the X86-64 ISA. Deeper than the ISA is the microarchitecture, which is what actually determines how the ISA is implemented. The microarchitecture of a processor determines many of it's qualities, which are listed above. Without using benchmarks it is only appropriate to compare processors based on specification if they are of the same microarchitecture, and even then there may be caveats.
+
+Often in advertisements (especially for pre-built systems) a processor will be described briefly, like this:
+AMD Ryzen 7 5700X at 3.4 GHz
+But there’s more to it than that, a more detailed specification would read as follows:
+AMD Ryzen 7 5700X eight core processor at 3.4GHz/4.6GHz, AM4 socket, 32MB L3 Cache, 4MB L2 Cache
+Which parses out to:
+1.	Model: AMD Ryzen 7 5700X
+2.	Base Clock Speed: 3.4 GHz (3400 MHz)
+3.	Turbo Clock Speed: 4.6 GHz (4600 MHz)
+4.	Socket: AM4
+5.	L3 Cache: 32 MB, L2 Cache: 8 × 512 kB
+So we can see that while 3.4 GHz is a fast clock speed, this processor might not be as fast as, a higher end AMD Ryzen 9 5950X, which runs at the same 3.4 GHz base clock speed, but has 8 MB more L2 cache and an additional eight processing cores.
+For an Intel example ,
+1.	Intel Core i5-13600K Processor 24M Cache, up to 5.10 GHz
+2.	Model: Intel Core i5-13600K
+3.	Cores: 14 (6P+8E)
+4.	Base Clock Speed: 3.5 GHz (=3500 MHz)
+5.	Turbo Clock Speed: 5.1 GHz (=5100 MHz)
+6.	Interface: LGA 1700
+7.	L2-Cache: 20 MB (=20480 kB)
+8.	L3-Cache: 24 MB (=24576 kB)
+
+
+Intel
+Intel classifies its CPUs using a series of numbers.[6] 2xxx, 3xxx, 4xxx, 5xxx, 6xxx, 7xxx, 8xxx, 9xxx, 10xxx, 11xxx, 12xxx, and 13xxx of which 13xxx denominates the latest generation. Generally, the higher the digit after generation, the faster the CPU and the more expensive. Many CPUs have suffixes: K denotes that the CPU is unlocked so can be overclocked; T denotes the low-power version; F denotes the CPUs without integrated graphics. Here is a list of most modern Intel Desktop CPUs:
+•	Intel Celeron (Dual/Quad core)
+The Celeron series is a range of CPUs for budget computers and used to feature just one core. The last single core Celeron was released as part of the Sandy Bridge line-up, and since then all Celeron G-series processors have been dual-core.
+The tablet-based Baytrail/Braswell Celeron have either 2 or 4 cores. However , due to their weak IPC , the performance does not match Core i CPU and single core performance is slightly below a Core 2 Duo with the same clockspeed.
+•	Intel Pentium (Dual core)
+The Pentium series was part of Intel's most popular CPUs. Earlier Intels all featured just one core, although the newer Pentiums feature dual-core support, such as the Pentium D, the Pentium Dual-Core, and the Pentium G-series processors.
+Baytrail/Braswell Pentium are generally quad-core. The weak IPC would generally mean that their multi-core performance would be around the range of a Core M , with half the single core performance.
+•	Intel Core i3 (2 to 4 cores (desktop) / 2 to 10 cores (mobile))
+These are low end processors that have hyperthreading enabled, allowing them to make use of multi-threaded software more efficiently. This CPU series is made for LGA 1156, 1155, 1150, 1151, 1200 and 1700 , depending on generation. This processor lineup is adequate for most applications, including the majority of games. Since the 9th generation, they have Turbo Boost.
+•	Intel Core i5 (4 - 14 cores (desktop) , 2 - 14 cores (mobile))
+These are mid range processors without hyperthreading(dual-core variants do have it). Like the rest of the 'i' lineup, they are made for LGA 1156,1155,1150,1151,1200 and 1700 depending on generation. This series can take almost any game without bottlenecking the graphics card. Turbo boost is included , which allows the processor to dynamically overclock to higher click speeds when power and thermal limits allow for.
+•	Intel Core i7 (4 - 16 cores (desktop) , 2 - 20 cores (mobile))
+Intel's flagship line of consumer microprocessors, these CPUs all have 4 - 16 cores, feature Hyper Threading and feature higher amounts of cache and Intel's new "Turbo Boost" technology, which allows all cores to automatically clock themselves to appropriate frequencies in intervals of 133(Nehalem only)/100(Sandy Bridge and higher) MHz without stressing the processor and risking overheating. This feature is unavailable on LGA775-based Core 2 , but most of them utilize a partial overclock by raising the multiplier by 0.5 when one core for every 2 cores is not in used. This means 2 cores can be turbo overclocked on a Core 2 Quad. It also support DDR4 and, since the 12th generation, DDR5, memory and does not use a FSB (Front Side Bus), but rather uses an Intel QuickPath interface. Turbo Boost is also available on i3 and i5.
+•	Intel Core i9 (8 - 24 cores (desktop) , 6 - 24 cores (mobile))
+•	Intel Xeon (2 - 28 cores)
+The Xeon brand was a brand of Intel x86/64 processors for workstations, servers, and embedded systems. The Xeon brand features single, dual, quad, , hexa(actually up to 28). core processors (although don't get excited - remember that these are for servers and similar systems, not your "Ultra-awesome high-tech bleeding-edge owns-everybody-else's computer" with a 790i Ultra SLi motherboard and 4 graphics cards)
+Additional Intel features
+These features may not be there in every model.
+1.	XD Technology: A CPU's model number followed by suffix J signifies XD (eXecute Disable) technology, which is an added security feature on Intel CPUs. Note that AMD processors have a similar technology dubbed EVP, or "Enhanced Virus Protection. Note that it is now included with every processor as it is required since Windows 8.
+2.	VT-X In 2006 , Intel and AMD introduced a feature known as hardware virtualization which boosts speeds when using more than 1 OS at the same time. This feature is available on some Intel Core 2 and most processors after that.
+Naming schemes
+Naming schemes determine how a CPU is named based on its performance , clockspeed and price.
+The consumer logic for processor speed may be misleading because many consumers think that clock speed, which is measured in gigahertz (GHz) or megahertz (MHz) is equal to system speed. While a higher clock speed will allow the CPU to do cycles more frequently and it does have a fundamental effect on speed, it is not the sole factor as the number of calculations (and data handled) per cycle is different for each different manufacturer and model. In addition, other factors, such as FSB speed will affect the CPU's ability to process data efficiently. If the FSB and RAM aren't able to get data to the CPU as quickly as the CPU can process it, then the CPU will spend some of the cycles doing nothing. A cycle during which the CPU does nothing is called a wasted cycle.
+Intel
+Nehalem and higher(Core i architecture)
+The Nehalem/Lynnfield/Sandy Bridge/Ivy Bridge/Haswell series line-up uses a different naming scheme as follows.
+1.	Celeron/Pentium indicates a basic dual core. Pentiums usually have more cache and higher clockspeed than Celerons.
+2.	i3 denotes 2 to 4 cores with hyperthreading (except 8th and 9th generations). Since 9th generation (9xxx), they have Turbo functionality.
+3.	i5 usually denotes 4 to 14 cores with hyperthreading, for 10th to 13th generations, and all feature turbo functionality which allows the processor to raise its clockspeed under load. However, certain(2) earlier low wattage(35W) i5 were dual core hyperthreaded.
+4.	i7 denotes 4 to 16 cores with hyperthreading except 9th generation, and all feature turbo functionality.
+5.	i9 denotes 8 to 24 cores with hyperthreading, and all feature turbo functionality.
+To find the generation and the socket for the processor, it is necessary to look at the numbering of the processors.
+1.	Any cpu that has the i designation and 3 digits is meant for LGA 1156(Nehalem.)
+2.	Any cpu that has the ix-2xxx(Sandy Bridge) or ix-3xxx(Ivy Bridge) type naming is for LGA 1155.
+3.	Any cpu that has the ix-4xxx(Haswell) or ix-5xxx(Broadwell) naming is for LGA 1150.
+4.	Any CPU that has the ix-6xxx(Skylake) or ix-7xxx(Kaby Lake) naming is for LGA 1151.
+5.	Any CPU that has the ix-8xxx(Coffee Lake) or ix-9xxx(Coffee Lake) is for LGA 1151v2.
+6.	Any CPU that has the ix-10xxx(Comet Lake) or ix-11xxx(Rocket Lake) is for LGA 1200.
+7.	Any CPU that has the ix-12xxx(Alder Lake) or ix-13xxx(Raptor Lake) is for LGA 1700.
+The exception to this is the E(Extreme) series of the generation.
+1.	The i7-9xx series(Nehalem) use LGA 1366.
+2.	The i7-3820/39x0 series(Sandy Bridge) and the i7-4820K/49x0 series(Ivy Bridge) use LGA 2011.
+3.	The i7-5820K/59x0 series(Haswell) use LGA 2011-v3 , which is incomparable with LGA 2011.
+For the budget Celeron/Pentium ,
+1.	Celeron G1101/Pentium G6950 is meant for LGA 1156
+2.	Celeron G4xx and G5xx/Pentium G6xx and G8xx series are for LGA 1155
+3.	Celeron G16xx/Pentium G2xxx are for LGA1155
+4.	Celeron G18xx/Pentium G3xxx are for LGA 1150
+Each processor has a letter after the model number which tells the type of CPU. To find out , use this:-
+1.	T:- These types of processors use very less power than other variants(usually between 35-45 W). Some ultra-low power variants use 35 W , while others use 45W. Performance is usually somewhat reduced compared to other variants , especially for the i5/i7 35W variants.
+2.	S:- These types of processors , while using more power that the T series , use less than their usual(no letter) variants. This is found only on i5 and i7 processors and use 65 W. Not present since Broadwell.
+3.	No letter:- These types of processors use the full power. They range from 53 W(up to i5) till 84 W(i5 , i7). Nehalem CPU's can use up to over 130 W. Skylake and later CPU's use only 65W, effectively replacing the S series.
+4.	K/X:- These types of processors , only in i5, i7, i9 and Extreme series and the Pentium G3258 processors , can be overclocked beyond their normal clock speeds. They use between 53 W(Pentium) to over 165W(Extreme).
+5.	R:- These processors(i5 - 4570R/4670R , i7-4770R , i5-5565R/5665R , i5-5775R) are not the ones you'll be building , as they are meant to be used in all-in-one PC types and they do not use the normal LGA1150 , they use BGA1164 socket. This variant has better graphics than the normal CPU's(Iris Pro). They use 65W of power. These processors cannot overclock(which the C series can).
+6.	E:- Embedded processors. Not the ones you'll typically encounter.
+7.	P:- Does not contain Intel's integrated graphics. Applies only to Sandy Bridge and Ivy Bridge. Exception:- i5-6402P
+8.	C:- These are i5 and i7 processors(i5-5665C , i7-5775C) which contain Iris Pro , Intel's top of the line integrated graphics. These processors can overclock and have a S series TDP(65 W). The main difference between it and the R series processors is that the C series uses the standard LGA 1150 socket , which the R series do not.
+and for mobile processors ,
+1.	Y:- Uses very little power , about 11.5(Haswell) to 13(Ivy Bridge)W.
+2.	U:- Uses less power , from 15 to 28 W(though 15W is more common). This SKU is used in computers such as the MacBook Air and Surface Pro 3.
+3.	M:- Uses about 37W , they are found in mainstream notebooks and some all-in-one PC's. i7 quad-core variants can use up to 47W depending on model. This type of CPU is easier to remove(Socket G1/PGA) , though not as easy as the desktop variants. Also you may have to find your desired replacement CPU on the Internet , as you would not find mobile Intel CPU's in most shops.
+4.	E:- Embedded processors. Not the ones you'll typically encounter.
+5.	Q:- Quad-core. Usually paired with H or Q to indicate a mobile quad-core processor. Example:- i7-4700MQ. Applies only to i7 and i5 since Skylake.
+6.	H:- Used in all-in-one PC's and many laptops, uses about 47W of power(37 W for i3). This type of CPU cannot be easily removed(mostly soldered to the motherboard) because of the type of socket it uses(BGA).
+7.	X:- Extreme series , they can be overclocked. Uses about 57W of power. These processors are very expensive and are found only in i7's. Exception - i7-6820HK , which is around the same price as a standard quad-core i7.
+8.	C:- Special embedded processors.
+9.	Core M - Considered as the successor of the Y series of Haswell , these processors are used in ultra-light tablets and notebooks. These processors have a TDP of 3.5-7 W that can be configured by the manufacturer if required. Some devices come without a fan at this level.(eg - MacBook)
+Note:- There are some exceptions to this. This applies only to Nehalem(1st generation i series and higher)
+1.	The i7-3820 processor is overclockable , but has a multiplier limitation of 43x which can be partially overcome by increasing the BCLK speeds. This processor is an Extreme i7 processor and uses 130W.
+2.	Nehalem ultra low low-wattage mobile(18 W) CPU's are marked as 'UM' and not just as 'U' as in Sandy Bridge and later.
+3.	Nehalem low wattage models(26 W) mobile CPU's are marked as 'LM'. Sandy Bridge and Ivy Bridge do not have this , and Haswell(28 W) are marked as 'U' only.
+4.	i7-6820HK is overclockable.
+AMD
+ AN AMD Ryzen CPU. The gold triangle in the bottom left assists with alignment during insertion. As seen here, most AMD CPUs use pins that insert into a socket on the motherboard, which is the opposite of Intel platforms, which feature pins on the motherboard.
+Recent AMD Ryzen CPUs use a naming scheme that is different than, but similar to Intel's. AMD and Intel now both use the 3/5/7/9 series CPU classification, with AMD not using an "i" prefix. Ryzen processors increase in price as the last three numbers increase.
+Zen 4
+•	Ryzen 9 7950X3D 4.2/5.7 GHz 16c/32t
+•	Ryzen 9 7950X 4.5/5.7 GHz 16c/32t
+•	Ryzen 9 7900X3D 4.4/5.6 GHz 12c/24t
+•	Ryzen 9 7900X 4.7/5.6 GHz 12c/24t
+•	Ryzen 9 7900 3.7/5.4 GHz 12c/24t
+•	Ryzen 7 7800X3D max 5.0 GHz 8c/16t
+•	Ryzen 7 7700X 4.5/5.4 GHz 8c/16t
+•	Ryzen 7 7700 3.8/5.3 GHz 8c/16t
+•	Ryzen 5 7600X 4.7/5.3 GHz 6c/12t
+•	Ryzen 5 7600 3.8/5.1 GHz 6c/12t
+
+•	The TDP of a processor gives an idea of how much power would it consume in a standard heavy use scenario.
+•	But note that it does not give the absolute maximum power it would consume. For instance , if you try to stress your CPU by running Prime95(a popular CPU stressing tool) or something of that sort , it is likely to exceed the TDP rating(atleast for a short period of time , this depends on the cooling efficiency.)
+•	In some cases , it can nearly be the double. For instance , a MacBook Air with 15W TDP can hit up to 29W when running graphics-heavy workloads.
+•	The TDP in a laptop is lower than a desktop , because laptops have space and battery requirements.
+CPU cooling
+ A aluminum heat sink with a copper base, heat pipes, and black fan mounted on the top. This particular heatsink has pre-applied thermal compound (The white square on the base), but this is not a given with all heatsinks. A CPU water block, the equivalent of a HSF for water cooling. The two holes are the insertion points for hoses.
+CPU cooling is very important. A cool CPU temperature prolongs CPU life, sometimes by as much as 10 years, and allows your CPU to maintain a higher speed through Intel Turbo Boost or AMD Turbo Core. Conversely, high CPU temperatures can cause unreliable operation, such as computer freezes, or slow operation.
+Extremely high temperatures can cause immediate CPU destruction by melting or burning the chip. Because of this, never switch on the computer if your CPU has no cooling at all. Trying to turn your computer on without a cooler installed "just to test whether my CPU works" is a bad idea and you may find that the CPU fries in less than 5 seconds and you will be out your money. If your computer turns off unexpectedly during use, it could be because of inefficient cooling. Modern CPU's automatically throttle when the temperature reaches its TJunction(usually 100C) and halts if it keeps on climbing.
+Most CPU installations use forced-air cooling, but water cooling is another fairly common option. Convection cooling and even oil submersion cooling are more exotic options. For traditional forced-air cooling, the heat sink and fan (HSF) included with most retail CPUs is usually sufficient to cool the CPU at stock speed. Overclockers might want to use a more powerful after-market fan, or try water cooling to combat the increased heat caused by overclocking.
+A small amount of thermally conductive compound is used in between the CPU and the heatsink to ensure optimal heat transfer. Many retail heatsinks have a thermal pad preinstalled. This pad is usable only once. If you wish to remove the fan from another CPU so that you can use it on your new one, or need to take it off for some reason, you will need to remove the pad and apply a thermal paste or another thermal pad. A poor quality thermal compound or application may result in less optimal performance, and a high quality compound and application may lower temperatures significantly on it's own. If you plan to do any high performance computing, or remove and replace the HSF often, a decent or high quality thermal paste is suggested. If you are planning on a long term installation a thermal pad is often best. Using one or the other is essential to ensure consistent heat conduction between the CPU and heatsink. Thermal compounds work optimally for a few years before they should be replaced.
+Electrically insulating thermal pastes made up of silicon are the cheapest and safest, but silver-based thermal pastes sometimes perform better and carbon-based ones perform better still. When applied improperly both can be conductive, causing electrical shorts upon contact with the motherboard. A thin properly-applied layer will usually prevent this problem, although some pastes can become runny when they get hot. Users should also beware that many "silver" thermal pastes do not actually contain any silver metal.
+For quiet operation, start with a low-heat (low wattage) CPU. You can also underclock your CPU, giving up some unneeded performance for some peace and quiet. Another option is to choose a large copper heat sink with an open fin pattern. However, true fanless operation is difficult to achieve in most case designs. You can position a case fan to blow across the heat sink, or mount a fan on the heat sink. With either choice, a large and slow fan will give better airflow and less noise than a small and fast fan.
+Some low-noise CPU cooling fans require special mounting hardware on the motherboard. Be sure that the cooling systems you choose are compatible with your motherboard.
+Overclocking
+More details can be found here:- How To Assemble A Desktop PC/Overclocking
+Desktop chips
+Most desktop chips are locked to prevent overclocking.
+Intel chips marked with a K have unlocked multipliers, allowing for easier overclocking. K series processors are usually priced slightly higher than locked CPU models.
+AMD chips are typically unlocked, even on lower end chips.
+The ability for a processor to overclock well is highly dependent on the individual CPU. This is due to minute differences caused during manufacturing, which are not noticeable at stock speeds, but can become problematic at higher speeds or when consuming more power. This so called "Silicon Lottery" could mean your chip under preforms or over preforms the typical overclocking potential of your specific processor.
+There are external factors that affect the ability of a CPU to achieve a stable overclock, such as the power provided by a motherboard, or the cooling offered by the heatsink.
+Mobile chips
+If you have chosen to use a mobile processor in a desktop system, it is likely for their low power requirements and heat benefits. Overclocking basically nullifies these benefits, and is rarely supported on mobile chips anyway. However, there are some exceptions.
+Intel mobile cpus marked with HK can be overclocked.
+Privacy concerns
+Modern CPU designs have raised a number of interesting privacy concerns. Both Intel and AMD CPUs have features designed for corperate users that are opaque to regular users, and have represented security risks in the past. The Intel Management Engine has been used on Intel chips since 2008. The AMD Platform Security Processor is similar to Intel's Management Engine and has been used on AMD chips since 2013.
+A number of security vulnerabilities such as Meltdown and Spectre were found in the late 2010's. Sometimes, but not always, hardware vulnerabilities can be patched by microcode or handled by the operating system, but often at significant performance costs.
+Unconventional CPU choices
+For whatever reason, you may want to use an non Intel or AMD CPU for your system. These choices are unconventional on desktop computers for good reasons. Their linage typically stems from other use cases, such as embedded or mobile systems, and are often woefully under powered or based on cheaper obsolete manufacturing methods. They are typically available as a SOC only, and your choice in what GPU, RAM, or other hardware you end up using may be limited or non existent. Furthermore software support is limited, and you are typically left running some flavor of Linux or BSD, and even then the lack of support for that hardware may affect you.
+Through a quirk of history, VIA makes some low powered x86 processors.
+There are a few ATX form factor motherboards with standard expansion slots and integrated ARM or PowerPC processors intended for special use servers and workstations.
+There are also a number of smaller boards of nonstandard sizes that use ARM or RISC-V processors. Intended for hobbyists and developers, these boards are cheap, but offer limited power and component flexibility.
+Prices
+Level	Prices
+Ultra budget	$30-49
+Extra budget	$50-69
+Entry-level	$70-99
+Upper entry-level	$100-149
+Lower mid-range	$150-199
+Mid-range	$200-249
+Upper mid-range	$250-299
+Lower high-end	$300-349
+High-end	$350-399
+Upper high-end	$400-499
+Flagship	$500-599
+True flagship	$600-799
+Ultimate flagship	$800+
+
+Key questions
+•	How to choose a CPU?
