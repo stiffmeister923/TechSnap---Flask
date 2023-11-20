@@ -20,14 +20,17 @@
             display: none;
             position: fixed;
             height: 550px;
+            width: 450px;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             padding: 20px;
+            border-radius: 30px;
             background-color: white;
             border: 1px solid #ccc;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            z-index: 1;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+            z-index: 2;
+            animation: fadeInModal 0.5s ease-in-out;
         }
 
         .overlay {
@@ -38,48 +41,52 @@
             width: 100%;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.5);
-            z-index: 0;
+            z-index: 1;
         }
 
-        .Submitbruh{
-            display:inline-block;
+        .Submitbruh,
+        button {
+            display: inline-block;
+            padding: 10px;
+            color: #9c7afc;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
         }
 
         .form-container {
             background-color: #fff;
             padding: 20px;
-            border-radius: 8px;
+            border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         label {
-            display: block;
+            display: inline-flex;
+            align-items: center;
             margin-bottom: 5px;
         }
 
         input[type="radio"] {
+            vertical-align: middle;
             margin-right: 5px;
+            margin: 0;
         }
 
         input[type="text"] {
-            width: 100%;
+            width: 50%;
+            background-color: #e2e2e2;
             padding: 8px;
             box-sizing: border-box;
             margin-bottom: 10px;
         }
 
-        button {
-            padding: 10px;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+        .Submitbruh:hover,
+        button:hover {
+            background-color: #cab8fb;
         }
 
-        button:hover {
-            background-color: #45a049;
-        }
-        
         .banner-overlay {
             padding: 20px; 
             border-radius: 10px; 
@@ -111,11 +118,19 @@
         }
 
         @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1; 
+            }
+        }
+        @keyframes fadeInModal {
         from {
             opacity: 0;
         }
         to {
-            opacity: 1; 
+            opacity: 1;
         }
     }
     </style>
@@ -145,13 +160,13 @@
                         <button onclick="openModal()" class="about-btn">Open Category Selection</button>
                         <div id="modal" class="modal">
                             <form action="/process_form" method="post" onsubmit="return validateForm()">
-                                <label>Choose a category:</label><br>
+                                <label>Choose A Category:</label><br>
                                 <input type="radio" id="gaming" name="category" value="gaming" required>
                                 <label for="gaming">Gaming</label><br>
                                 <input type="radio" id="professional" name="category" value="professional" required>
                                 <label for="professional">Professional</label><br><br>
                     
-                                <label>Choose a subcategory:</label><br>
+                                <label>Choose A Subcategory:</label><br>
                                 <input type="radio" id="laptop" name="subcategory" value="laptop" required>
                                 <label for="laptop">Laptop</label><br>
                                 <input type="radio" id="pc" name="subcategory" value="pc" required>
@@ -161,8 +176,8 @@
                                 <input type="text" id="budget" name="budget" required><br><br>
                     
                                 <button type="submit" class="Submitbruh">Submit</button>
+                                <button onclick="closeModal()" class="Submitbruh">Close</button>
                             </form>
-                            <button onclick="closeModal()">Close</button>
                         </div>
                     
                         <div id="overlay" class="overlay" onclick="closeModal()"></div>
@@ -213,20 +228,20 @@
                                             </thead>
                                             <tbody>
                                                 {% for obj in recommend1 %}
-                                                    <tr>
-                                                        <td>{{ obj.ID }}</td>
-                                                        <td>{{ obj.Motherboard }}</td>
-                                                        <td>{{ obj.GPU }}</td>
-                                                        <td>{{ obj.CPU }}</td>
-                                                        <td>{{ obj.Storage }}</td>
-                                                        <td>{{ obj.RAM }}</td>
-                                                        <td>{{ obj.PSU }}</td>
-                                                        <td>{{ obj.Case }}</td>
-                                                        <td>{{ obj.Cost }}</td>
-                                                        <td>{{ obj.Score}}</td>
-                                                        <td>{{ obj.Source}}</td>
-                                                        <!-- Add more columns as needed -->
-                                                    </tr>
+                                                <tr>
+                                                    <td>{{ obj.ID }}</td>
+                                                    <td>{{ obj.Motherboard }}</td>
+                                                    <td>{{ obj.GPU }}</td>
+                                                    <td>{{ obj.CPU }}</td>
+                                                    <td>{{ obj.Storage }}</td>
+                                                    <td>{{ obj.RAM }}</td>
+                                                    <td>{{ obj.PSU }}</td>
+                                                    <td>{{ obj.Case }}</td>
+                                                    <td>{{ obj.Cost }}</td>
+                                                    <td>{{ obj.Score}}</td>
+                                                    <td>{{ obj.Source}}</td>
+                                                    <!-- Add more columns as needed -->
+                                                </tr>
                                                 {% endfor %}
                                             </tbody>
                                         </table>
@@ -235,54 +250,54 @@
                             </div>
                         </section>
                         <!-- Result End -->
-                        
+
                         <!-- Result Start -->
                         <section class="" data-scroll-index="0">
-                          <div class="banner-overlay">
-                              <div class="container">
-                                  <div class="row">
-                                      <h3>Best deals under your budget</h3>
-                                  </div>
-                                  <div class="row">
-                                      <table border="1">
-                                          <thead>
-                                              <tr>
-                                                  <th>ID</th>
-                                                  <th>Motherboard</th>
-                                                  <th>GPU</th>
-                                                  <th>CPU</th>
-                                                  <th>Storage</th>
-                                                  <th>RAM</th>
-                                                  <th>PSU</th>
-                                                  <th>Case</th>
-                                                  <th>Cost</th>
-                                                  <th>Performance Utilization</th>
-                                                  <th>Source</th>
-                                                  <!-- Add more columns as needed -->
-                                              </tr>
-                                          </thead>
-                                          <tbody>
-                                              {% for obj in recommend2 %}
-                                                  <tr>
-                                                      <td>{{ obj.ID }}</td>
-                                                      <td>{{ obj.Motherboard }}</td>
-                                                      <td>{{ obj.GPU }}</td>
-                                                      <td>{{ obj.CPU }}</td>
-                                                      <td>{{ obj.Storage }}</td>
-                                                      <td>{{ obj.RAM }}</td>
-                                                      <td>{{ obj.PSU }}</td>
-                                                      <td>{{ obj.Case }}</td>
-                                                      <td>{{ obj.Cost }}</td>
-                                                      <td>{{ obj.Score}}</td>
-                                                      <td>{{ obj.Source}}</td>
-                                                      <!-- Add more columns as needed -->
-                                                  </tr>
-                                              {% endfor %}
-                                          </tbody>
-                                      </table>
-                                  </div>
-                              </div>
-                          </div>
+                            <div class="banner-overlay">
+                                <div class="container">
+                                    <div class="row">
+                                        <h3>Best deals under your budget</h3>
+                                    </div>
+                                    <div class="row">
+                                        <table border="1">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Motherboard</th>
+                                                    <th>GPU</th>
+                                                    <th>CPU</th>
+                                                    <th>Storage</th>
+                                                    <th>RAM</th>
+                                                    <th>PSU</th>
+                                                    <th>Case</th>
+                                                    <th>Cost</th>
+                                                    <th>Performance Utilization</th>
+                                                    <th>Source</th>
+                                                    <!-- Add more columns as needed -->
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {% for obj in recommend2 %}
+                                                <tr>
+                                                    <td>{{ obj.ID }}</td>
+                                                    <td>{{ obj.Motherboard }}</td>
+                                                    <td>{{ obj.GPU }}</td>
+                                                    <td>{{ obj.CPU }}</td>
+                                                    <td>{{ obj.Storage }}</td>
+                                                    <td>{{ obj.RAM }}</td>
+                                                    <td>{{ obj.PSU }}</td>
+                                                    <td>{{ obj.Case }}</td>
+                                                    <td>{{ obj.Cost }}</td>
+                                                    <td>{{ obj.Score}}</td>
+                                                    <td>{{ obj.Source}}</td>
+                                                    <!-- Add more columns as needed -->
+                                                </tr>
+                                                {% endfor %}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
                         </section>
                         <!-- Result End -->
                     </div>
@@ -315,6 +330,7 @@
 <script src="/static/js/scrollIt.min.js"></script>
 <script src="/static/js/wow.min.js"></script>
 <script>
+    
     var uploadedImage = localStorage.getItem("uploadedImage");
 
     if (uploadedImage) {
@@ -327,41 +343,42 @@
             imageElement.style.border = "4px solid #fff";
         }
     }
+
     function openModal() {
-            document.getElementById('modal').style.display = 'block';
-            document.getElementById('overlay').style.display = 'block';
+        document.getElementById("modal").style.display = "block";
+        document.getElementById("overlay").style.display = "block";
+    }
+
+    function closeModal() {
+        document.getElementById("modal").style.display = "none";
+        document.getElementById("overlay").style.display = "none";
+    }
+
+    function validateForm() {
+        var categoryRadios = document.getElementsByName("category");
+        var categorySelected = false;
+
+        for (var i = 0; i < categoryRadios.length; i++) {
+            if (categoryRadios[i].checked) {
+                categorySelected = true;
+                break;
+            }
         }
 
-        function closeModal() {
-            document.getElementById('modal').style.display = 'none';
-            document.getElementById('overlay').style.display = 'none';
+        if (!categorySelected) {
+            alert("Please Choose A Category!");
+            return false;
         }
 
-        function validateForm() {
-            var categoryRadios = document.getElementsByName('category');
-            var categorySelected = false;
-
-            for (var i = 0; i < categoryRadios.length; i++) {
-                if (categoryRadios[i].checked) {
-                    categorySelected = true;
-                    break;
-                }
-            }
-
-            if (!categorySelected) {
-                alert('Please choose a category!');
-                return false;
-            }
-
-            var budget = document.getElementById('budget').value;
-            if (isNaN(budget) || budget <= 0) {
-                alert('Please enter a valid budget!');
-                return false;
-            }
-
-            closeModal();  // Close the modal after successful validation
-            return true;
+        var budget = document.getElementById("budget").value;
+        if (isNaN(budget) || budget <= 0) {
+            alert("Please Enter A Valid Budget!");
+            return false;
         }
+
+        closeModal(); // Close the modal after successful validation
+        return true;
+    }
 </script>
 </body>
 </html>
