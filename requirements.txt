@@ -2,4 +2,4 @@ Flask
 Requests
 Gunicorn
 Flask-SQLAlchemy
-farm-haystack
+farm-haystack['inference']
