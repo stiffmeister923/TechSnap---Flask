@@ -93,7 +93,7 @@
                         <div id="overlay" class="overlay" onclick="closeModal()"></div>
                         <form action="/answer" method="post">
                             <label for="question">Enter your question:</label>
-                            <input type="text" id="question" name="question" required>
+                            <input placeholder="What is a {{result1['data'][0]['name']}}?" type="text" id="question" name="question" required>
                             <button type="submit">Get Answer</button>
                         </form>
                         {% if question %}

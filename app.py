@@ -46,8 +46,9 @@ def process_form():
         unicodess = u"\u279C"
         # Process the selections (you can replace this with your actual processing logic)
         result = session.get('resultImg', {})
-        category = f'{category} {unicodess} {subcategory}'
+        
         inference = session.get('inference',{})
+        category = f'{category} {unicodess} {subcategory}'
         #template results[selected,best][per computer][attributes]
         # Pass the result to the template
         return render_template('recommend.html', recommend1=results[0], recommend2 =results[1] , category=category.upper(), result=result, result1=inference)
@@ -116,9 +117,11 @@ def answer():
         )
         # Call your Q&A model to get the answer based on the user's question
         # Replace the following line with your actual Q&A model inference code
-       
+        result = session.get('resultImg', {})
+        
+        inference = session.get('inference',{})
 
-        return render_template('index.html', question=question, answer=prediction['answers'][0].answer)
+        return render_template('new.html', question=question, answer=prediction['answers'][0].answer,result=result, result1=inference)
 
 if __name__ == '__main__':
     with app.app_context():

@@ -3,4 +3,6 @@ Requests
 Gunicorn
 Flask-SQLAlchemy
 farm-haystack[all]
-canals
+canals==1.2.3
+pip>=21.2.4
+pip-upgrade
