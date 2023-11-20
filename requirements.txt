@@ -2,6 +2,4 @@ Flask
 Requests
 Gunicorn
 Flask-SQLAlchemy
-farm-haystack[all]
-pip>=21.2.4
-pip-upgrade
+farm-haystack
