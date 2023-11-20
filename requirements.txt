@@ -2,4 +2,4 @@ Flask
 Requests
 Gunicorn
 Flask-SQLAlchemy
-farm-haystack[inference,preprocessing,docstores,file-conversion]
+farm-haystack[inference,docstores]
