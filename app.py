@@ -101,7 +101,7 @@ def submit_contact():
 @app.route('/answer', methods=['POST'])
 def answer():
     if request.method == 'POST':
-        bro = "contextcopy/your_context"
+        bro = "context/your_context"
         model = "stiffmeister923/BERT-trained-computerparts"
         document_store = InMemoryDocumentStore(use_bm25=True)
         files_to_index = [bro + "/" + f for f in os.listdir(bro)]
