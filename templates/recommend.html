@@ -40,9 +40,84 @@
             background-color: rgba(0, 0, 0, 0.5);
             z-index: 0;
         }
+
         .Submitbruh{
             display:inline-block;
         }
+
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+        
+        .banner-overlay {
+            padding: 20px; 
+            border-radius: 10px; 
+            background-color: #9c7afc; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+            opacity: 0; 
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px; 
+        }
+
+        th, td {
+            border: 1px solid #cab8fb;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #cab8fb;
+        }
+
+        .about {
+            padding: 40px;
+        }
+
+        @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1; 
+        }
+    }
     </style>
 </head>
 <body>
@@ -58,7 +133,7 @@
 
 <!-- Result Start -->
 <section class="banner" data-scroll-index="0">
-    <div class="banner-overlay">
+    <div class="banner-over">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-sm-12">
@@ -102,110 +177,6 @@
 </section>
 <!-- Result End -->
 
-<!-- Result Start -->
-<section class="banner" data-scroll-index="0">
-    <div class="banner-overlay">
-        <div class="container">
-            <div class="row">
-                <h1>{{category}}</h1>
-            </div>
-            <div class="row">
-                <h3>Computers you might need if you need to buy more than one person</h3>
-            </div>
-            <div class="row">
-                <table border="1">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Motherboard</th>
-                            <th>GPU</th>
-                            <th>CPU</th>
-                            <th>Storage</th>
-                            <th>RAM</th>
-                            <th>PSU</th>
-                            <th>Case</th>
-                            <th>Cost</th>
-                            <th>Bottleneck</th>
-                            <th>Source</th>
-                            <!-- Add more columns as needed -->
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for obj in recommend1 %}
-                            <tr>
-                                <td>{{ obj.ID }}</td>
-                                <td>{{ obj.Motherboard }}</td>
-                                <td>{{ obj.GPU }}</td>
-                                <td>{{ obj.CPU }}</td>
-                                <td>{{ obj.Storage }}</td>
-                                <td>{{ obj.RAM }}</td>
-                                <td>{{ obj.PSU }}</td>
-                                <td>{{ obj.Case }}</td>
-                                <td>{{ obj.Cost }}</td>
-                                <td>{{ obj.Score}}</td>
-                                <td>{{ obj.Source}}</td>
-                                <!-- Add more columns as needed -->
-                            </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Result End -->
-
-<!-- Result Start -->
-<section class="banner" data-scroll-index="0">
-  <div class="banner-overlay">
-      <div class="container">
-          <div class="row">
-              <h3>Best deals under your budget</h3>
-          </div>
-          <div class="row">
-              <table border="1">
-                  <thead>
-                      <tr>
-                          <th>ID</th>
-                          <th>Motherboard</th>
-                          <th>GPU</th>
-                          <th>CPU</th>
-                          <th>Storage</th>
-                          <th>RAM</th>
-                          <th>PSU</th>
-                          <th>Case</th>
-                          <th>Cost</th>
-                          <th>Bottleneck</th>
-                          <th>Source</th>
-                          <!-- Add more columns as needed -->
-                      </tr>
-                  </thead>
-                  <tbody>
-                      {% for obj in recommend2 %}
-                          <tr>
-                              <td>{{ obj.ID }}</td>
-                              <td>{{ obj.Motherboard }}</td>
-                              <td>{{ obj.GPU }}</td>
-                              <td>{{ obj.CPU }}</td>
-                              <td>{{ obj.Storage }}</td>
-                              <td>{{ obj.RAM }}</td>
-                              <td>{{ obj.PSU }}</td>
-                              <td>{{ obj.Case }}</td>
-                              <td>{{ obj.Cost }}</td>
-                              <td>{{ obj.Score}}</td>
-                              <td>{{ obj.Source}}</td>
-                              <!-- Add more columns as needed -->
-                          </tr>
-                      {% endfor %}
-                  </tbody>
-              </table>
-          </div>
-      </div>
-  </div>
-</section>
-<!-- Result End -->
-
-
 <!-- Other Start -->
 <section class="about section-padding prelative" data-scroll-index="1">
     <div class="container">
@@ -213,36 +184,107 @@
             <div class="col-md-12">
                 <div class="section-content text-center">
                     <div class="row">
-                        <div class="col-md-4">
-                            <div class="icon-box wow fadeInUp" data-wow-delay="0.2s">
-                                <i class="fas fa-life-ring" aria-hidden="true"></i>
-                                <h5>Support</h5>
-                                <p>
-                                    Phasellus lobortis justo a magna facilisis, in commodo
-                                    tellus rutrum. Sed vitae condimentum nulla.
-                                </p>
+                        <section class="" data-scroll-index="0">
+                            <div class="banner-overlay">
+                                <div class="container">
+                                    <div class="row">
+                                        <h1>{{category}}</h1>
+                                    </div>
+                                    <div class="row">
+                                        <h3>Computers you might need if you need to buy more than one person</h3>
+                                    </div>
+                                    <div class="row">
+                                        <table border="1">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Motherboard</th>
+                                                    <th>GPU</th>
+                                                    <th>CPU</th>
+                                                    <th>Storage</th>
+                                                    <th>RAM</th>
+                                                    <th>PSU</th>
+                                                    <th>Case</th>
+                                                    <th>Cost</th>
+                                                    <th>Performance Utilization</th>
+                                                    <th>Source</th>
+                                                    <!-- Add more columns as needed -->
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {% for obj in recommend1 %}
+                                                    <tr>
+                                                        <td>{{ obj.ID }}</td>
+                                                        <td>{{ obj.Motherboard }}</td>
+                                                        <td>{{ obj.GPU }}</td>
+                                                        <td>{{ obj.CPU }}</td>
+                                                        <td>{{ obj.Storage }}</td>
+                                                        <td>{{ obj.RAM }}</td>
+                                                        <td>{{ obj.PSU }}</td>
+                                                        <td>{{ obj.Case }}</td>
+                                                        <td>{{ obj.Cost }}</td>
+                                                        <td>{{ obj.Score}}</td>
+                                                        <td>{{ obj.Source}}</td>
+                                                        <!-- Add more columns as needed -->
+                                                    </tr>
+                                                {% endfor %}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="icon-box wow fadeInUp" data-wow-delay="0.4s">
-                                <i class="fas fa-mobile" aria-hidden="true"></i>
-                                <h5>Cross Platform</h5>
-                                <p>
-                                    Phasellus lobortis justo a magna facilisis, in commodo
-                                    tellus rutrum. Sed vitae condimentum nulla.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="icon-box wow fadeInUp" data-wow-delay="0.6s">
-                                <i class="fas fa-bolt" aria-hidden="true"></i>
-                                <h5>Fast</h5>
-                                <p>
-                                    Phasellus lobortis justo a magna facilisis, in commodo
-                                    tellus rutrum. Sed vitae condimentum nulla.
-                                </p>
-                            </div>
-                        </div>
+                        </section>
+                        <!-- Result End -->
+                        
+                        <!-- Result Start -->
+                        <section class="" data-scroll-index="0">
+                          <div class="banner-overlay">
+                              <div class="container">
+                                  <div class="row">
+                                      <h3>Best deals under your budget</h3>
+                                  </div>
+                                  <div class="row">
+                                      <table border="1">
+                                          <thead>
+                                              <tr>
+                                                  <th>ID</th>
+                                                  <th>Motherboard</th>
+                                                  <th>GPU</th>
+                                                  <th>CPU</th>
+                                                  <th>Storage</th>
+                                                  <th>RAM</th>
+                                                  <th>PSU</th>
+                                                  <th>Case</th>
+                                                  <th>Cost</th>
+                                                  <th>Performance Utilization</th>
+                                                  <th>Source</th>
+                                                  <!-- Add more columns as needed -->
+                                              </tr>
+                                          </thead>
+                                          <tbody>
+                                              {% for obj in recommend2 %}
+                                                  <tr>
+                                                      <td>{{ obj.ID }}</td>
+                                                      <td>{{ obj.Motherboard }}</td>
+                                                      <td>{{ obj.GPU }}</td>
+                                                      <td>{{ obj.CPU }}</td>
+                                                      <td>{{ obj.Storage }}</td>
+                                                      <td>{{ obj.RAM }}</td>
+                                                      <td>{{ obj.PSU }}</td>
+                                                      <td>{{ obj.Case }}</td>
+                                                      <td>{{ obj.Cost }}</td>
+                                                      <td>{{ obj.Score}}</td>
+                                                      <td>{{ obj.Source}}</td>
+                                                      <!-- Add more columns as needed -->
+                                                  </tr>
+                                              {% endfor %}
+                                          </tbody>
+                                      </table>
+                                  </div>
+                              </div>
+                          </div>
+                        </section>
+                        <!-- Result End -->
                     </div>
                     <a href="{{ url_for('index') }}" class="about-btn">Recognition New Image</a>
                 </div>
