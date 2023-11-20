@@ -45,6 +45,8 @@ def run_function(category,subcategory,budget):
             return [selected_computers, best_computer]
         else:
             selected_computers = knapsack(laptop[0], budget) 
+            best_computer = find_best_computer2(laptop[0], budget)
+            return [selected_computers, best_computer]
     else:
         if(subcategory == 'PC'.lower()):
             selected_computers = knapsack(profdataset[0], budget)
@@ -52,7 +54,9 @@ def run_function(category,subcategory,budget):
             #return [selected_computers,best_computer]
             return [selected_computers, best_computer]
         else:
-            selected_computers = knapsack(proflapset[0], budget)   
+            selected_computers = knapsack(proflapset[0], budget)
+            best_computer = find_best_computer2(proflapset[0], budget)   
+            return [selected_computers, best_computer]
 
 def return_string(selected, best):
     stringtable = []
