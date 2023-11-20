@@ -2,3 +2,4 @@ Flask
 Requests
 Gunicorn
 Flask-SQLAlchemy
+farm-haystack[all]
