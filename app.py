@@ -1,11 +1,10 @@
 from flask import Flask, request, session, jsonify, render_template, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 from prebuiltsystem import run_function
+from pine import getanswer
 import requests
 import os
-from haystack.pipelines.standard_pipelines import TextIndexingPipeline,ExtractiveQAPipeline
-from haystack.nodes import BM25Retriever, FARMReader
-from haystack.document_stores.memory import InMemoryDocumentStore
+
 
 app = Flask(__name__)
 app.secret_key = 'Matt'
@@ -102,26 +101,14 @@ def submit_contact():
 @app.route('/answer', methods=['POST'])
 def answer():
     if request.method == 'POST':
-        bro = "context/your_context"
-        model = "stiffmeister923/BERT-trained-computerparts"
-        document_store = InMemoryDocumentStore(use_bm25=True)
-        files_to_index = [bro + "/" + f for f in os.listdir(bro)]
-        indexing_pipeline = TextIndexingPipeline(document_store)
-        indexing_pipeline.run_batch(file_paths=files_to_index)
-        retriever = BM25Retriever(document_store=document_store)
-        reader = FARMReader(model_name_or_path=model, use_gpu=True)
+        
         question = request.form['question']
-        pipe = ExtractiveQAPipeline(reader, retriever)
-        prediction = pipe.run(
-        query=question, params={"Retriever": {"top_k": 10}, "Reader": {"top_k": 5}}
-        )
-        # Call your Q&A model to get the answer based on the user's question
-        # Replace the following line with your actual Q&A model inference code
+        prediction = getanswer(question)
         result = session.get('resultImg', {})
         
         inference = session.get('inference',{})
 
-        return render_template('new.html', question=question, answer=prediction['answers'][0].answer,result=result, result1=inference)
+        return render_template('new.html', question=question, answer=prediction,result=result, result1=inference)
 
 if __name__ == '__main__':
     with app.app_context():
