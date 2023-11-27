@@ -2,4 +2,9 @@ Flask
 Requests
 Gunicorn
 Flask-SQLAlchemy
-farm-haystack[inference]
+pinecone-client
+sentence-transformers
+transformers[torch]
+torch
+sentence-transformers/all-MiniLM-L6-v2
+deepset/roberta-base-squad2
