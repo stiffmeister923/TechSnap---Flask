@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>TechSnap</title>
+    <link rel="shortcut icon" href="/static/css/TS.png" type="x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <link rel="stylesheet" type="text/css" href="/static/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
@@ -15,202 +16,113 @@
     <!-- Font Google -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        .modal {
-            display: none;
-            position: fixed;
-            height: 550px;
-            width: 450px;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            padding: 20px;
-            border-radius: 30px;
-            background-color: white;
-            border: 1px solid #ccc;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 1);
-            z-index: 2;
-            animation: fadeInModal 0.5s ease-in-out;
-        }
-
-        .overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 1;
-        }
-
-        .Submitbruh,
-        button {
-            display: inline-block;
-            padding: 10px;
-            color: #9c7afc;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-right: 10px;
-        }
-
-        .form-container {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        label {
-            display: inline-flex;
-            align-items: center;
-            margin-bottom: 5px;
-        }
-
-        input[type="radio"] {
-            vertical-align: middle;
-            margin-right: 5px;
-            margin: 0;
-        }
-
-        input[type="text"] {
-            width: 50%;
-            background-color: #e2e2e2;
-            padding: 8px;
-            box-sizing: border-box;
-            margin-bottom: 10px;
-        }
-
-        .Submitbruh:hover,
-        button:hover {
-            background-color: #cab8fb;
-        }
-
-        .banner-overlay {
-            padding: 20px; 
-            border-radius: 10px; 
-            background-color: #9c7afc; 
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            margin-bottom: 20px;
-            opacity: 0; 
-            animation: fadeIn 1s ease-in-out forwards;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px; 
-        }
-
-        th, td {
-            border: 1px solid #cab8fb;
-            padding: 8px;
-            text-align: center;
-        }
-
-        th {
-            background-color: #cab8fb;
-        }
-
-        .about {
-            padding: 40px;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1; 
-            }
-        }
-        @keyframes fadeInModal {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
-    }
-    </style>
 </head>
 <body>
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg">
     <div class="container">
-        <a class="navbar-brand navbar-logo">
-            <img src="/static/css/Logo.png" alt="logo" class="logo-1">
-        </a>
+      <a class="navbar-brand navbar-logo">
+        <img src="/static/css/Logo.png" alt="logo" class="logo-1" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="fas fa-bars"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/#cw">Computer Budgeting</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/#team">Team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/#contact">Contact</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              More
+            </a>
+            <div class="dropdown-menu animated slideDown more-actions" aria-labelledby="navbarDropdown">
+              <form action="/component">
+                <button class="drop-down-list">Find Components</button>
+              </form>
+              <form action="/pre_built">
+                <button class="drop-down-list">Look for Pre-builts</button>
+              </form>
+              <form action="/querying">
+                <button class="drop-down-list">Ask Here</button>
+              </form>
+              
+              <!-- Add dropdown items as needed -->
+            </div>
+          </li>
+        </ul>
+      </div>
+      
     </div>
 </nav>
 <!-- End Navbar -->
 
 <!-- Result Start -->
-<section class="banner" data-scroll-index="0">
-    <div class="banner-over">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-sm-12">
-                    <div class="banner-text">
-                        <h2 class="white">Results</h2>
-                        {% if result1 %}
-                        <h6 class="white">The Predicted Computer part is {{result1['data'][0]['name']}} with a confidence of  {{ "{:.2f}".format(result1['data'][0]['confidence']*100) }}%</h6>
-                        {% endif %}
-                        <button onclick="openModal()" class="about-btn">Open Category Selection</button>
-                        <div id="modal" class="modal">
-                            <form action="/process_form" method="post" onsubmit="return validateForm()">
-                                <label>Choose A Category:</label><br>
-                                <input type="radio" id="gaming" name="category" value="gaming" required>
-                                <label for="gaming">Gaming</label><br>
-                                <input type="radio" id="professional" name="category" value="professional" required>
-                                <label for="professional">Professional</label><br><br>
-                    
-                                <label>Choose A Subcategory:</label><br>
-                                <input type="radio" id="laptop" name="subcategory" value="laptop" required>
-                                <label for="laptop">Laptop</label><br>
-                                <input type="radio" id="pc" name="subcategory" value="pc" required>
-                                <label for="pc">PC</label><br><br>
-                    
-                                <label for="budget">Enter your budget:</label><br>
-                                <input type="text" id="budget" name="budget" required><br><br>
-                    
-                                <button type="submit" class="Submitbruh">Submit</button>
-                                <button onclick="closeModal()" class="Submitbruh">Close</button>
-                            </form>
-                        </div>
-                    
-                        <div id="overlay" class="overlay" onclick="closeModal()"></div>
-                        <form action="/answer" method="post">
-                            <label for="question">Enter your question:</label>
-                            <input placeholder="What is a {{result1['data'][0]['name']}}?" type="text" id="question" name="question" required>
-                            <button type="submit">Get Answer</button>
-                        </form>
-                        {% if question %}
-                            <h2>Your Question:</h2>
-                            <p>{{ question }}</p>
-                            <h2>Answer:</h2>
-                            <p>{{ answer }}</p>
-                        {% endif %}
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-12">
-                    <img id="uploaded-image" src="{{ result1.image_url }}" alt="Uploaded Image">
-                </div>
-            </div>
+<section class="banner">
+  <div class="banner-over">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-12">
+          <div class="banner-text">
+            <form action="/process_form" method="post" onsubmit="return validateForm()">
+              <div class="nform-group">
+              <label>Choose A Category:</label><br>
+              <input type="radio" id="gaming" name="category" value="gaming" required>
+              <label for="gaming">Gaming</label>
+              <input type="radio" id="professional" name="category" value="professional" required>
+              <label for="professional">Professional</label><br><br>
+
+              <label>Choose A Subcategory:</label><br>
+              <input type="radio" id="laptop" name="subcategory" value="laptop" required>
+              <label for="laptop">Laptop</label>
+              <input type="radio" id="pc" name="subcategory" value="pc" required>
+              <label for="pc">PC</label><br><br>
+
+              <label for="budget">Enter Your Budget:</label><br>
+              <input type="text" id="budget" name="budget" required><br><br>
+
+              <button type="submit" class="Submitbruh">Submit</button>
+              </div>
+            </form>
+          </div>
+          </div>
+          <div class="col-md-4 col-sm-12" style="margin-bottom: -600px; bottom: 90px; right: 50px">
+            <img src="/static/css/Backg.png" alt="Image" style="width: 150%;">
         </div>
+        </div>
+      </div>
     </div>
 </section>
 <!-- Result End -->
 
 <!-- Other Start -->
-<section class="about section-padding prelative" data-scroll-index="1">
+<section class="about section-padding prelative">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="section-content text-center">
                     <div class="row">
-                        <section class="" data-scroll-index="0">
+                        <section class="">
                             <div class="banner-overlay">
                                 <div class="container">
                                     <div class="row">
@@ -263,7 +175,7 @@
                         <!-- Result End -->
 
                         <!-- Result Start -->
-                        <section class="" data-scroll-index="0">
+                        <section class="">
                             <div class="banner-overlay">
                                 <div class="container">
                                     <div class="row">
@@ -312,7 +224,7 @@
                         </section>
                         <!-- Result End -->
                     </div>
-                    <a href="{{ url_for('index') }}" class="about-btn">Recognition New Image</a>
+                    <a href="{{ url_for('index') }}" class="about-btn">Recognize Image</a>
                 </div>
             </div>
         </div>
@@ -355,41 +267,79 @@
         }
     }
 
-    function openModal() {
-        document.getElementById("modal").style.display = "block";
-        document.getElementById("overlay").style.display = "block";
-    }
+    
+        function openModal() {
+            document.getElementById('modal').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
 
-    function closeModal() {
-        document.getElementById("modal").style.display = "none";
-        document.getElementById("overlay").style.display = "none";
-    }
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
 
-    function validateForm() {
-        var categoryRadios = document.getElementsByName("category");
-        var categorySelected = false;
+        
 
-        for (var i = 0; i < categoryRadios.length; i++) {
-            if (categoryRadios[i].checked) {
-                categorySelected = true;
-                break;
+        function validateForm() {
+            var categoryRadios = document.getElementsByName('category');
+            var categorySelected = false;
+
+            for (var i = 0; i < categoryRadios.length; i++) {
+                if (categoryRadios[i].checked) {
+                    categorySelected = true;
+                    break;
+                }
             }
+
+            if (!categorySelected) {
+                alert('Please choose a category!');
+                return false;
+            }
+
+            var budget = document.getElementById('budget').value;
+            if (isNaN(budget) || budget <= 0) {
+                alert('Please enter a valid budget!');
+                return false;
+            }
+
+            closeModal();  // Close the modal after successful validation
+            return true;
         }
 
-        if (!categorySelected) {
-            alert("Please Choose A Category!");
-            return false;
-        }
+    wow = new WOW();
+    wow.init();
 
-        var budget = document.getElementById("budget").value;
-        if (isNaN(budget) || budget <= 0) {
-            alert("Please Enter A Valid Budget!");
-            return false;
-        }
+      // Navbar color change on scroll
+      $(window).on("scroll", function () {
+        var bodyScroll = $(window).scrollTop(),
+          navbar = $(".navbar");
 
-        closeModal(); // Close the modal after successful validation
-        return true;
-    }
+        if (bodyScroll > 50) {
+          $(".navbar-logo img").attr("src", "/static/css/Logo-Black.png");
+          navbar.addClass("nav-scroll");
+        } else {
+          $(".navbar-logo img").attr("src", "/static/css/Logo.png");
+          navbar.removeClass("nav-scroll");
+        }
+      });
+
+      // ScrollIt initialization
+      $(window).on("load", function () {
+        var bodyScroll = $(window).scrollTop(),
+          navbar = $(".navbar");
+
+        if (bodyScroll > 50) {
+          $(".navbar-logo img").attr("src", "/static/css/Logo-Black.png");
+          navbar.addClass("nav-scroll");
+        }
+        $.scrollIt({
+          easing: "swing",
+          scrollTime: 900,
+          activeClass: "active",
+          onPageChange: null,
+          topOffset: -63,
+        });
+      });   
 </script>
 </body>
 </html>
