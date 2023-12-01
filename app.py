@@ -42,7 +42,7 @@ def index():
 
 @app.route('/component')
 def findComponents():
-    return render_template('component.html')    
+    return render_template('components.html')    
 
 @app.route('/pre_built')
 def findPre_built():
