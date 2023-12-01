@@ -6,4 +6,5 @@ pinecone-client
 sentence-transformers
 transformers[torch]
 torch
-
+pandas
+numpy
