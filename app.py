@@ -180,7 +180,7 @@ def componentFunction():
 
     # Convert set to list and sort for consistent order
     attributes = sorted(list(attributes))
-    return render_template('component.html',result=result, result1=inference,attributes=attributes,data=data)
+    return render_template('components.html',result=result, result1=inference,attributes=attributes,data=data)
 
 
 if __name__ == '__main__':
