@@ -1,12 +1,12 @@
 import pandas as pd
 import numpy as np
 
-cpu_path = 'csv/cpu.csv'  # Replace with your CSV file path
-ram_path = 'csv/memory.csv'
-psu_path = 'csv/power-supply.csv'
-gpu_path = 'csv/video-card.csv'
-mobo_path = 'csv/motherboard.csv'
-storage_path = 'csv/internal-hard-drive.csv'
+cpu_path = 'cpu/cpu.csv'  # Replace with your CSV file path
+ram_path = 'cpu/memory.csv'
+psu_path = 'cpu/power-supply.csv'
+gpu_path = 'cpu/video-card.csv'
+mobo_path = 'cpu/motherboard.csv'
+storage_path = 'cpu/internal-hard-drive.csv'
 
 def ramfunc(budget, selectedoption):
     table = []
