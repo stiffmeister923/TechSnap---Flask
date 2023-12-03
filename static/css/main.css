@@ -82,6 +82,7 @@ h6 {
 /* Uploader */
 .uploader {
   display: block;
+  text-align: center;
   clear: both;
   margin: 0 auto;
   width: 100%;
@@ -855,8 +856,9 @@ input {
 }
 
 #next-page-btn {
+  z-index: 10000;
   margin-top: 20px;
-  margin-left: 105px;
+  
   background-color: #a011884f;
   color: #ffffff;
   padding: 0 20px;
@@ -943,7 +945,7 @@ button:hover {
 }
 
 table {
-  width: 100vw;
+  width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
 }
@@ -1176,3 +1178,54 @@ label[for="budget"] {
 .components-table{
   width:100%;
 }
+
+.svg-wave {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.custom-button-container {
+  position: relative;
+}
+
+.icon-box {
+  position: relative;
+}
+
+.icon-blur {
+  filter: blur(0);
+  transition: filter 0.3s;
+}
+
+.custom-button-container:hover .icon-blur {
+  filter: blur(2px);
+}
+
+.button-link {
+  position: relative; 
+  display: inline-block;
+}
+
+.button-text:hover {
+  background-color: #7a60ff;
+}
+
+.button-text {
+  color: #fff;
+  background-color: #cd9ffa;
+  border-radius: 10px;
+  padding: 5px 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.custom-button-container:hover .button-text {
+  opacity: 1;
+}
+
+
